@@ -1,2 +1,2 @@
-# mushsolution
+# Mush-Solution
 Sprint II
