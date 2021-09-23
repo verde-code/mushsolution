@@ -6,29 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mushsolutions@</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
 </head>
 
 <body class="corpo">
-
-    <!-- ---------------------------- HEADER ---------------------------- -->
-
+    <img class="verdecode-logo" src="./img/verdecode-logo-slogan.png">
 
     <div class="div-projetos">
-        <a href="#">Inicio</a>
+        <a href="./index.html">Inicio</a>
         <a class="menus" href="#">Serviços</a>
         <a class="menus" href="#">Tecnologias</a>
         <a class="menus" href="#">Sobre nós</a>
         <a class="menus" href="#">Fale conosco</a>
-        <a class="login" href="login.html" target="blank">Login</a>
-        <a class="cadastro" href="#">Cadastro</a>
+        <a class="conectar" href="./login.html">Login</a>
+        <a class="cadastro" href="./cadastro.html">Cadastro</a>
     </div>
 
-    
+    <p class="paragrafo-verde" style="margin-top: 6.55%;"></p>
 
-    <img class="img-fundo" src="./img/verdecode-background.png">
+    <img class="img-fundo" src="./img/fundo-do-site.jfif">
 
-    <div class="div-fundo-conteudo">
+    <div class="div-fundo-conteudo-flutuante">
 
         <div class="div_log">
 
@@ -40,25 +39,23 @@
                 <div class="box-login">
                     <h1>Faça aqui seu cadastro</h1><br><br><br>
                     <div class="login">
-                        Nome completo:<br><input type="text" class="input-nome"><br>
-                        CNPJ:<br><input type="text" class="input-cnpj"><br>
-                        Login: <br><input type="password" class="input-padrao-login"><br>
-                        Senha:<br> <input type="password" class="input-padrao-senha"><br>
+                        Nome completo:<br><input type="text" class="input-nome" placeholder="Digite seu nome"><br>
+                        CNPJ:*<br><input type="text" class="input-cnpj" placeholder="Digite seu CNPJ"><br>
+                        Email: <br><input type="text" class="input-padrao-login" placeholder="Digite seu email"><br>
+                        Senha:<br> <input type="password" class="input-padrao-senha" placeholder="Digite sua Senha"><br>
 
                         <div class="form-btn">
                             <span class="msg-cadastrar">Já é registrado? <a href="login.html" target="blank"><b>Entrar</b></a></span>
                             <br>
-                            <button class="btn btn-login" onclick="validacao_cadastro()">Registrar</button>
-
-
                             <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
-
-
                             <!-- Mensagem Validação -->
                             <span class="msg-validation" id="msg_register"></span>
+                            
                         </div>
+                        <button class="botao-verde" onclick="validacao_cadastro()" style="margin-top: 3vh;">Registrar</button>
                     </div>
 
+                    
                 </div>
 
 </body>
