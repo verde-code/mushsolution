@@ -1,0 +1,117 @@
+body{
+    background-color: black;
+    font-family: Arial;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #00e400;
+}
+.paragrafo-verde{
+    background-color: #00e400;
+    width: 100%;
+    height: 0.5%;
+    position: absolute;
+    margin-left: 0;
+}
+.verdecode-logo{
+    margin-top: 0.8%;
+    width: 23%;
+    margin-left: 2%;
+    position: absolute;
+}
+.div-projetos{
+    position: absolute;
+    width: 100%;
+    margin-left: 33%;
+    margin-top: 2.5%;
+}.menus{
+    margin-left: 2%;
+}
+.conectar{
+    color: #00e400;
+    margin-left: 20%;
+}
+.conectar:hover{
+    color: white;
+}
+.cadastro{
+    margin-left: 2%;
+}
+.img-fundo{
+    position: absolute;
+    margin-top: 6.9%;
+}
+.div-fundo-conteudo{
+    position: absolute;
+    margin-top: 9%;
+    padding-top: 3.2%;
+    background-color: black;
+    width: 100%;
+    height: 60%;
+    border-style: solid;
+    border-color: #00e400;
+    border-width: 0.5%;
+    border-left: none;
+    border-right: none;
+}
+.carrossel{
+    position: absolute;
+    padding-left: 2%;
+    width: 45%;
+}
+.carrossel-titulo{
+    padding-left: 55%;
+    position: absolute;
+    font-size:210%;
+    width: 40%;
+}
+.carrossel-texto{
+    position: absolute;
+    padding-left: 55%;
+    margin-top: 11.8%;
+    width: 40%;
+    font-size: 115%;
+    height: 0%;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.b-verde{
+    color: #00e400;
+}
+
+.botao-verde{
+    position: absolute;
+    background-color: #00e400;
+    color: #ffffff;
+    border: none;
+    width: 8%;
+    min-height: 10%;
+    max-height: 10%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+}
+.botao-verde:hover{   
+    background-color: #ffffff;
+    color: #00e400;
+}
+.botao-branco{
+    position: absolute;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    width: 8%;
+    min-height: 10%;
+    max-height: 10%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+}
+.botao-branco:hover{
+    color: #00e400;
+}

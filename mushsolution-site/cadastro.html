@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mushsolutions@</title>
+    <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
+</head>
+
+<body class="corpo">
+
+    <!-- ---------------------------- HEADER ---------------------------- -->
+
+
+    <div class="div-projetos">
+        <a href="#">Inicio</a>
+        <a class="menus" href="#">Serviços</a>
+        <a class="menus" href="#">Tecnologias</a>
+        <a class="menus" href="#">Sobre nós</a>
+        <a class="menus" href="#">Fale conosco</a>
+        <a class="login" href="login.html" target="blank">Login</a>
+        <a class="cadastro" href="#">Cadastro</a>
+    </div>
+
+    
+
+    <img class="img-fundo" src="./img/verdecode-background.png">
+
+    <div class="div-fundo-conteudo">
+
+        <div class="div_log">
+
+        </div>
+        <!-- ---------------------------- BOX LOGIN-INICIO---------------------------- -->
+
+        <div class="pag-login">
+            <div class="container">
+                <div class="box-login">
+                    <h1>Faça aqui seu cadastro</h1><br><br><br>
+                    <div class="login">
+                        Nome completo:<br><input type="text" class="input-nome"><br>
+                        CNPJ:<br><input type="text" class="input-cnpj"><br>
+                        Login: <br><input type="password" class="input-padrao-login"><br>
+                        Senha:<br> <input type="password" class="input-padrao-senha"><br>
+
+                        <div class="form-btn">
+                            <span class="msg-cadastrar">Já é registrado? <a href="login.html" target="blank"><b>Entrar</b></a></span>
+                            <br>
+                            <button class="btn btn-login" onclick="validacao_cadastro()">Registrar</button>
+
+
+                            <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
+
+
+                            <!-- Mensagem Validação -->
+                            <span class="msg-validation" id="msg_register"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+</body>
+
+</html>

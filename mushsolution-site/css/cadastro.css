@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins&display=swap%27');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-color: black;
+    font-family: Arial;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #00e400;
+}
+.paragrafo-verde{
+    background-color: #00e400;
+    width: 100%;
+    height: 0.5%;
+    position: absolute;
+    margin-left: 0;
+}
+
+.div-projetos{
+    position: absolute;
+    width: 100%;
+    margin-left: 33%;
+    margin-top: 2.5%;
+}.menus{
+    margin-left: 2%;
+}
+.login{
+    color: whites;
+    margin-left: 20%;
+}
+.login:hover{
+    color: white;
+}
+.cadastro{
+    color: #00e400;
+    margin-left: 2%;
+}
+.img-fundo{
+    position: absolute;
+    margin-top: 6.9%;
+}
+.div-fundo-conteudo{
+    position: absolute;
+    margin-top: 9%;
+    padding-top: 3.2%;
+    background-color: black;
+    width: 100%;
+    height: 60%;
+    border-style: solid;
+    border-color: #00e400;
+    border-width: 0.5%;
+    border-left: none;
+    border-right: none;
+}
+
+
+.btn-green{
+    color: #00e400;
+}
+
+.botao-verde{
+    position: absolute;
+    background-color: #00e400;
+    color: #ffffff;
+    border: none;
+    width: 8%;
+    min-height: 10%;
+    max-height: 10%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+}
+.botao-verde:hover{   
+    background-color: #ffffff;
+    color: #00e400;
+}
+.botao-branco{
+    position: absolute;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    width: 8%;
+    min-height: 10%;
+    max-height: 10%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+}
+.botao-branco:hover{
+    color: #00e400;
+}
+
+
+
+ .pag-login{
+    width: 600px;
+    height: 360px;
+    /* padding-left: 200px; Margin interna */
+    /* margin-left: 280px; */
+    margin: auto;
+    border-radius: 5px;
+    border: 2px solid #00e400; /*Borda na de espessura e cor*/
+    font-family: 'Poppins', sans-serif;
+            
+ }
+
+ .box-login h1{
+    text-align: center;
+ }
+
+ .box-login .login{
+    margin-left: 200px;
+    margin-top: -50px;
+    margin-bottom: 0;
+    
+ }
+
+ .box-login .login input{
+     width: 200px;
+     height: 30px;
+     border-radius: 15px;
+     
+
+ }
+
+ .box-login .login button{
+     width: 200px;
+     height: 30px;
+     border-radius: 5px;
+     margin-top: 10px;
+     color: white;
+     font-size: 16px;
+     border-radius: 15px;
+     background: transparent;
+ }
+ 
+ .msg-cadastrar{
+    color: #00e400; 
+ }
