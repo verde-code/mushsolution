@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MushSolution</title>
+    <title>MushSolution-login</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" href="./js/./login.js">
 </head>
 
 <body class="corpo">
-    <img class="verdecode-logo" src="./img/verdecode-logo-slogan.png">
+
 
     <!-- ---------------------------- HEADER ---------------------------- -->
 
@@ -25,63 +26,59 @@
         <a class="conectar" href="./login.html">Login</a>
         <a class="cadastro" href="./cadastro.html">Cadastro</a>
     </div>
-    
+
     <p class="paragrafo-verde" style="margin-top: 6.55%;"></p>
 
     <img class="img-fundo" src="./img/fundo-do-site.jfif">
 
     <div class="div-fundo-conteudo-flutuante">
 
-        <div class="div_log">
+        <!-- ---------------------------- Seção Login---------------------------- -->
 
-        </div>
-        <!-- ---------------------------- BOX LOGIN-INICIO---------------------------- -->
 
-        <div class="pag-login">
-            <div class="container">
-                <div class="box-login">
-                    <h1>Faça o login</h1><br><br><br>
-                    <div class="login">
-                        <!-- Campo Usuario -->
-                <div class="form-input input-login">
-                    <label>CNPJ:</label> <br>
-                    <i class="fa fa-user-o form-input-icon"></i>
+        <section class="container-login">
+
+            <!-- Conteúdo Lógin -->
+            <div class="box-login">
+                <h1>Faça seu login</h1><br><br><br>
+                <!-- Campo Usuario -->
+                <div class="input-login">
+                    <label>CNPJ:</label>
+                    <i class="form-input-icon"></i>
                     <!-- Icone Validação -->
-                    <i class="fa fa-check-circle icon-validation-true" id="icon_cpf_login_true"></i>
-                    <i class="fa fa-times-circle icon-validation-false" id="icon_cpf_login_false"></i>
-                    <input id="ipt_cpf_login" onkeyup="validacao_cpf_login()" type="text" placeholder="000.000.000-00"/> 
-                    <span class="form-validation-false" id="msg_cpf_validation_login"></span>
-                </div>  
-
-                    <!-- Campo Senha -->
-                <div class="form-input input-login">
-                    <label>Senha: <span><a href="recover.html"> </a></span> <br></label> 
-                    <i class="fa fa-lock form-input-icon"></i>
+                    <i class="validation-true" id="cnpj_login_true"></i>
+                    <i class="validation-false" id="cnpj_login_false"></i>
+                    <input id="ipt_cnpj_login" onkeyup="validacao_cnpj_login()" type="text"
+                        placeholder="000.000.0000-00" />
+                    <span class="validation-false" id="msg_cnpj_validation_login"></span>
+                </div>
+                <!-- Campo Senha -->
+                <div class="input-login">
+                    <label>Senha: <span></label>
+                    <i class="form-input-icon"></i>
                     <!-- Icone Visualizar Senha -->
-                    <i class="fa fa-eye-slash icon-display-password" id="form_show_password" onclick="display_show_password()"></i>
-                    <i class="fa fa-eye icon-display-password" id="form_hidden_password" onclick="display_hidden_password()"></i>
+                    <i class="icon-display-password" id="form_show_password"
+                        onclick="display_show_password()"></i>
+                    <i class="icon-display-password" id="form_hidden_password"
+                        onclick="display_hidden_password()"></i>
                     <!-- Icone Validação -->
-                    <i class="fa fa-check-circle icon-validation-true" id="icon_senha_login_true"></i>
-                    <i class="fa fa-times-circle icon-validation-false" id="icon_senha_login_false"></i>
-                    <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="password" placeholder="Digite sua senha"/> 
-                    <span  class="form-validation-false" id="msg_senha_validation_login"></span>
+                    <i class="validation-true" id="icon_senha_login_true"></i>
+                    <i class="icon-validation-false" id="icon_senha_login_false"></i>
+                    <input id="ipt_cnpj_login" onkeyup="validacao_senha_login()" type="password"
+                        placeholder="Digite sua senha" />
+                    <span class="form-validation-false" id="msg_senha_validation_login"></span>
                 </div>
                 <!-- Botão Login -->
                 <div class="form-btn">
-                    <span class="msg-cadastrar">Não possuí cadastro?  <a href="cadastro.html">Cadastre-se</a></span> <br>   
-                    
+                    <span class="msg-cadastrar">Não possuí cadastro? <a href="cadastro.html"><b>Registre-se</b></a>
+                        <br></span>
+                    <button class="botao-verde" onclick="validacao_login()">Entrar</button>
                     <!-- Mensagem Validação -->
                     <span class="msg-validation" id="msg_login"></span>
-                </div> 
+                </div>
 
+            </div>
+        </section>
+</body>
 
-                            <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
-
-
-                            <!-- Mensagem Validação -->
-                            <span class="msg-validation" id="msg_register"></span>
-                        </div>
-                    </div>
-                    <button class="botao-verde" onclick="validacao_login()"><b>Entrar</b></button>
-
-                </div>  
+</html>

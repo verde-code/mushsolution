@@ -1,8 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins&display=swap%27');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .login{
     color: white;
 }
 .login:hover{
     color: white;
+}
+  
+.div-fundo-conteudo-flutuante{
+    width: 27vw;
+    height: 60vh !important;
+    margin-left: 34vw;
+    margin-top: 14vw
+  
+ }
+
+
+
+.container-login{
+  padding-left: 80px;
+  margin-top: 20px;
+  height: 70px;
+
+}
+
+#ipt_cnpj_login{
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+
+  
+}
+
+#ipt_senha_login{
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+  
+}
+
+.botao-verde{
+  cursor: pointer;
+}
+
+
+
+.form-input{
+  color: var(--primary);
+  font-size: 0.9em;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
  .pag-login{
@@ -11,7 +73,7 @@
     margin-top: 2vw;
     margin-left: 12vh;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+   
             
  }
 
@@ -56,7 +118,7 @@
    margin-top: 14vw;
  }
 
- .botao-verde{
+ .btn-login{
    margin-left: 0; 
    margin-top: 1vw; 
    width: 7vw;

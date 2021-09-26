@@ -11,7 +11,7 @@
 </head>
 
 <body class="corpo">
-    <img class="verdecode-logo" src="./img/verdecode-logo-slogan.png">
+
 
     <div class="div-projetos">
         <a href="./index.html">Inicio</a>
@@ -33,31 +33,76 @@
 
         </div>
         <!-- ---------------------------- BOX LOGIN-INICIO---------------------------- -->
+        <!-- Seção Registro -->
+        <section class="container-register">
+            <!-- Formulário Registro -->
+            <div class="pag-login">
+                <div class="container">
+                    <div class="box-login">
+                        <h1>Faça seu cadastro</h1><br><br><br>
+                        <div class="login">
+                            <!-- Campo Nome -->
+                            <div class="input-register">
+                                <label for="">Nome:</label>
+                                <i class="form-input-icon"></i>
+                                <!-- Icone Validação -->
+                                <i class="validation-true" id="icon_name_register_true"></i>
+                                <i class="validation-false" id="icon_name_register_false"></i>
+                                <input id="input-name" onkeyup="validacao_name_register()" type="text"
+                                    placeholder="Digite seu nome">
+                                <span class="validation-false" id="msg_name_validation_register"></span>
+                            </div>
+                            <!-- Campo Sobrenome -->
+                            <div class="input-register">
+                                <label for="">Sobrenome:</label>
+                                <i class="form-input-icon"></i>
+                                <!-- Icone Validação -->
+                                <i class="validation-true" id="icon_lastname_register_true"></i>
+                                <i class="validation-false"
+                                    id="icon_lastname_register_false"></i>
+                                <input id="ipt_lastname_register" onkeyup="validacao_lastname_register()" type="text"
+                                    placeholder="digite seu sobrenome">
+                                <span class="form-validation-false" id="msg_lastname_validation_register"></span>
+                            </div>
 
-        <div class="pag-login">
-            <div class="container">
-                <div class="box-login">
-                    <h1>Faça seu cadastro</h1><br><br><br>
-                    <div class="login">
-                        Nome completo:<br><input type="text" class="input-nome" placeholder="Digite seu nome"><br>
-                        CNPJ:*<br><input type="text" class="input-cnpj" placeholder="Digite seu CNPJ"><br>
-                        Email: <br><input type="text" class="input-padrao-login" placeholder="Digite seu email"><br>
-                        Senha:<br> <input type="password" class="input-padrao-senha" placeholder="Digite sua Senha"><br>
+                            <!-- Campo CNPJ -->
+                            <div class="form-input input-register">
+                                <label for="">CNPJ:</label>
+                                <i class="fa fa-id-card-o form-input-icon"></i>
+                                <!-- Icone Validação -->
+                                <i class="validation-true" id="cpf_register_true"></i>
+                                <i class="validation-false" id="cpf_register_false"></i>
+                                <input id="input-cnpj" onkeyup="validacao_cnpj_register()" type="text"
+                                    placeholder="000.000.000.0000/00">
+                                <span class="form-validation-false" id="msg_cpf_validation_register"></span>
+                            </div>
+                            <!-- Campo Login -->
+                            <div class="form-input input-register">
+                                <label for="">Login:</label>
+                                <i class="fa fa-phone form-input-icon"></i>
+                                <!-- Icone Validação -->
+                                <i class="validation-true" id="tel_register_true"></i>
+                                <i class="validation-false" id="tel_register_false"></i>
+                                <input id="ipt_login_register" onkeyup="validacao_tel_register()" type="text"
+                                    placeholder="digite um login">
+                                <span class="form-validation-false" id="msg_login_validation_register"></span>
+                            </div>
+                        </div>
 
                         <div class="form-btn">
-                            <span class="msg-cadastrar">Já é registrado? <a href="login.html" target="blank">Entrar</a></span>
+                            <span class="msg-cadastrar">Já é registrado?<a href="./login.html" target="blank">Entrar</a></span>
                             <br>
                             <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
                             <!-- Mensagem Validação -->
                             <span class="msg-validation" id="msg_register"></span>
-                            
+
                         </div>
-                        <button class="botao-verde" onclick="validacao_cadastro()">Registrar</button>
+                        <button class="botao-verde"  onclick="validacao_cadastro()">Registrar</button>
                     </div>
 
-                    
-                </div>
 
+                </div>
+        </section>
 </body>
 
 </html>
