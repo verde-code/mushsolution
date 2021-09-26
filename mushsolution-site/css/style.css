@@ -2,7 +2,7 @@
 
 * {
     max-width: 99vw;
-    max-height: 99vh;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
@@ -15,7 +15,8 @@ body{
     background-size: cover;
     width: 99vw;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0vh;
+    padding: 0;
     position: absolute;
 }
 a{
@@ -68,7 +69,7 @@ a:hover{
 .div-fundo-conteudo{
     position: absolute;
     margin-top: 11%;
-    background-color: rgba(000, 000, 000, 0.9);
+    background-color: rgba(000, 000, 000, 0.89);
     width: 100%;
     height: 60%;
     border-style: solid;
@@ -80,7 +81,7 @@ a:hover{
 }
 .div-fundo-conteudo-flutuante{
     position: absolute;
-    margin-top: 11%;
+    margin-top: 12vw;
     margin-left: 63vh;
     background-color: rgba(000, 000, 000, 0.9);
     width: 40%;

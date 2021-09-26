@@ -1,6 +1,5 @@
 .login{
     color: white;
-    margin-left: 20%;
 }
 .login:hover{
     color: white;
@@ -9,39 +8,44 @@
  .pag-login{
     width: 600px;
     height: 360px;
-    /* padding-left: 200px; Margin interna */
-    /* margin-left: 280px; */
-    margin: auto;
+    margin-top: 5vh;
+    margin-left: 6.5vw;
     border-radius: 5px;
-    /*border: 2px solid #00e400; Borda na de espessura e cor*/
     font-family: 'Poppins', sans-serif;
             
  }
 
- .box-login h1{
-    text-align: center;
- }
-
  .box-login .login{
-    margin-left: 25.5vh;
     margin-bottom: 0;
     margin-top: 0;
     
  }
 
  .box-login .login input{
-     width: 200px;
-     height: 30px;
-     border-radius: 9px;
-     border: none;
+    width: 14.5vw;
+    height: 5vh;
+    border-radius: 9px;
+    border: none;
+    padding-left: 2%;
+    outline: none;
      
  }
  
- .botao-verde{
-     margin-left: 8vh;
-     height: 20%;
- }
-
- .msg-cadastrar{
+.msg-cadastrar{
     color: #00e400; 
- }
+}
+.div-fundo-conteudo-flutuante{
+    width: 28vw; 
+    height: 53.3vh; 
+    margin-left: 34vw;
+}
+.botao-verde{
+    margin-left: 0;
+    margin-top: 1vw; 
+    width: 7vw;
+}
+
+.img-fundo{
+      width: 100vw;
+      height: 86.72vh;
+}
