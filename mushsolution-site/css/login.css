@@ -87,14 +87,14 @@ body{
     
  }
 
- .box-login .login input{
+ /*.box-login .login input{
     width: 14.5vw;
     height: 5vh;
     border-radius: 9px;
     border: none;
     padding-left: 2%;
     outline: none;
- }
+ }*/
 
  .box-login .login button{
      width: 200px;
