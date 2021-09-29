@@ -1,0 +1,53 @@
+
+*{
+    max-width: 99vw;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.logo{  
+    width: 5px;
+    height: 5px;
+    
+    
+}
+
+.div_projetos{
+    position:absolute;
+    margin-left: 35%;
+    margin-top: 2.5%;
+}
+
+.sensor-texto{
+    position:absolute;
+    margin-top:50px;
+    margin-left: 350px;
+}  
+
+.sensor-texto-2{
+    position: absolute;
+    margin-top: 150px; 
+    margin-left: 350px;
+}
+
+
+.tecnologia-titulo{
+    margin: 10px;
+}
+
+.img-fundo{
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-sensor{
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.b-verde{
+    margin-left: 300px;
+}
