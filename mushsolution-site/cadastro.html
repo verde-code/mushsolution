@@ -44,9 +44,6 @@
                             <div class="input-register">
                                 <label for="">Nome:</label>
                                 <i class="form-input-icon"></i>
-                                <!-- Icone Validação -->
-                                <i class="validation-true" id="icon_name_register_true"></i>
-                                <i class="validation-false" id="icon_name_register_false"></i>
                                 <input id="input-name" onkeyup="validacao_name_register()" type="text"
                                     placeholder="Digite seu nome">
                                 <span class="validation-false" id="msg_name_validation_register"></span>
@@ -55,36 +52,31 @@
                             <div class="input-register">
                                 <label for="">Sobrenome:</label>
                                 <i class="form-input-icon"></i>
-                                <!-- Icone Validação -->
-                                <i class="validation-true" id="icon_lastname_register_true"></i>
-                                <i class="validation-false"
-                                    id="icon_lastname_register_false"></i>
                                 <input id="ipt_lastname_register" onkeyup="validacao_lastname_register()" type="text"
                                     placeholder="digite seu sobrenome">
-                                <span class="form-validation-false" id="msg_lastname_validation_register"></span>
+                                
+    
                             </div>
 
                             <!-- Campo CNPJ -->
                             <div class="form-input input-register">
-                                <label for="">CNPJ:</label>
+                                <label for="">CNPJ:</label> <br>
                                 <i class="fa fa-id-card-o form-input-icon"></i>
                                 <!-- Icone Validação -->
-                                <i class="validation-true" id="cpf_register_true"></i>
-                                <i class="validation-false" id="cpf_register_false"></i>
-                                <input id="input-cnpj" onkeyup="validacao_cnpj_register()" type="text"
-                                    placeholder="000.000.000.0000/00">
-                                <span class="form-validation-false" id="msg_cpf_validation_register"></span>
+                                <i class="validation-true" id="cnpj_register_true"></i>
+                                <i class="validation-false" id="cnpj_register_false"></i>
+                                <input id="input_cnpj" onkeyup="validacao_cnpj_register()" type="text"placeholder="000.000.000.0000/00"><br>
+                                <span class="form-validation-false" id="msg_cnpj_validation"></span>
                             </div>
                             <!-- Campo Login -->
-                            <div class="form-input input-register">
-                                <label for="">Login:</label>
-                                <i class="fa fa-phone form-input-icon"></i>
+                            <div class="input-register">
+                                <label for="">Login:</label> <br>
+                               
                                 <!-- Icone Validação -->
-                                <i class="validation-true" id="tel_register_true"></i>
-                                <i class="validation-false" id="tel_register_false"></i>
-                                <input id="ipt_login_register" onkeyup="validacao_tel_register()" type="text"
-                                    placeholder="digite um login">
-                                <span class="form-validation-false" id="msg_login_validation_register"></span>
+                                <i class="" id="senha_login_true"></i>
+                                <i class="validation-false" id="senha_login_false"></i>
+                                <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="text" placeholder="digite um login"><br>
+                                <span class="form-validation-false" id="msg_senha_validation_login"></span>
                             </div>
                         </div>
 
@@ -96,7 +88,7 @@
                             <span class="msg-validation" id="msg_register"></span>
 
                         </div>
-                        <button class="botao-verde"  onclick="validacao_cadastro()">Registrar</button>
+                        <button class="botao-verde" onclick="validacao_cadastro()">Registrar</button>
                     </div>
 
 
@@ -105,3 +97,40 @@
 </body>
 
 </html>
+<script>
+    //Expressão CNPJ
+    var cnpjReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\.?[0-9]{4}\-?[0-9]{2}$/;
+   
+    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-Z]{1})(?=.*[a-z]{1})[a-zA-Z0-9]{6,}$/;
+
+    function validacao_cnpj_register() {
+        // Variáveis Login
+        var cnpj_login = input_cnpj.value;
+        // Verifica CNPJ
+        if (cnpj_login.match(cnpjReg)) {
+            msg_cnpj_validation.innerHTML = '';
+            cnpj_register_true.style.display = 'block';
+            cnpj_register_false.style.display = 'none';
+        } else {
+            msg_cnpj_validation.innerHTML = '<span style="color: #ff0000;">Insira um CNPJ válido</span>';
+            cnpj_register_false.style.display = 'block';
+            cnpj_register_true.style.display = 'none';
+        }
+    }
+
+    function validacao_senha_login() {
+        // Variáveis Senha
+        var senha_login = ipt_senha_login.value;
+        // Verifica Senha
+        if (senha_login.match(senhaReg)) {
+            msg_senha_validation_login.innerHTML = '';
+            senha_login_true.style.display = 'block';
+            senha_login_false.style.display = 'none';
+        } else {
+            msg_senha_validation_login.innerHTML = '<span style="color: #ff0000;">Insira uma senha válida</span>';
+            senha_login_false.style.display = 'block';
+            senha_login_true.style.display = 'none';
+        }
+    }
+
+</script>

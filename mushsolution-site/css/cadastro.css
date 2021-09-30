@@ -7,13 +7,6 @@
 }
 
 
-/* body{
-  display: flex;
-  flex-direction: column;
-} */
- 
-
-
 .login{
     color: white;
 }
@@ -42,14 +35,14 @@
   
 }
 
-#input-cnpj{
+#input_cnpj{
   display: flex;
   height: 35px;
   border-radius: 6px;
   
 }
 
-#ipt_login_register{
+#ipt_senha_login {
   display: flex;
   height: 35px;
   border-radius: 6px;
@@ -92,14 +85,7 @@
     
  }
 
-/* .box-login .login input{
-    width: 14.5vw;
-    height: 5vh;
-    border-radius: 9px;
-    border: none;
-    padding-left: 2%;
-    outline: none;
- }*/
+
 
  .box-login .login button{
      width: 200px;
@@ -117,7 +103,8 @@
  }  
 
  .div-fundo-conteudo-flutuante{
-  height: 440px; 
+  
+  height: 510px; 
   width: 400px;
   margin-left: 34vw;
   margin-top: 20vh;
