@@ -1,47 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;800&family=Poppins&display=swap%27');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
 .login{
     color: white;
-    margin-left: 20%;
 }
 .login:hover{
     color: white;
+}
+  
+
+.container-login{
+  padding-left: 80px;
+  height: 70px;
+
+}
+
+#input-name{
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+  
+}
+
+#ipt_lastname_register{
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+  
+}
+
+#input_cnpj{
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+  
+}
+
+#ipt_senha_login {
+  display: flex;
+  height: 35px;
+  border-radius: 6px;
+
+}
+
+.botao-verde{
+  cursor: pointer;
+}
+
+
+
+.form-input{
+  color: var(--primary);
+  font-size: 0.9em;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+
 }
 
  .pag-login{
     width: 600px;
     height: 360px;
-    /* padding-left: 200px; Margin interna */
-    /* margin-left: 280px; */
-    margin: auto;
+    margin-top: 0;
+    margin-left: 15vh;
     border-radius: 5px;
-    /*border: 2px solid #00e400; Borda na de espessura e cor*/
-    font-family: 'Poppins', sans-serif;
-            
- }
+  
+  }
 
- .box-login h1{
-    text-align: center;
+ .box-login{
+     padding-top: 0vh;
+     margin-top: 5vh;
  }
 
  .box-login .login{
-    margin-left: 25.5vh;
     margin-bottom: 0;
     margin-top: 0;
     
  }
 
- .box-login .login input{
+
+
+ .box-login .login button{
      width: 200px;
      height: 30px;
-     border-radius: 9px;
-     border: none;
-     
+     border-radius: 5px;
+     margin-top: 10px;
+     color: white;
+     font-size: 16px;
+     border-radius: 7px;
+     background: transparent;
  }
  
- .botao-verde{
-     margin-left: 8vh;
-     height: 20%;
- }
-
  .msg-cadastrar{
     color: #00e400; 
+ }  
+
+ .div-fundo-conteudo-flutuante{
+  
+  height: 510px; 
+  width: 400px;
+  margin-left: 34vw;
+  margin-top: 20vh;
+  
  }
+
+ .btn-login{
+   margin-left: 0; 
+   margin-top: 1vw; 
+   width: 7vw;
+ }
+ .img-fundo{
+   width: 100%;
+   height: 100%;
+}

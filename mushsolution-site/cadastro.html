@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mushsolutions@</title>
+    <title>MushSolution</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
 </head>
 
 <body class="corpo">
-    <img class="verdecode-logo" src="./img/verdecode-logo-slogan.png">
+    <img class="mushsolution-logo" src="./img/mushsolution-logo.png">
 
-    <div class="div-projetos">
+    <div id="div-header" class="div-projetos">
         <a href="./index.html">Inicio</a>
-        <a class="menus" href="#">Serviços</a>
-        <a class="menus" href="#">Tecnologias</a>
-        <a class="menus" href="#">Sobre nós</a>
+        <a class="menus" href="#div-tecnologia">Tecnologias</a>
+        <a class="menus" href="#div-servicos">Serviços</a>
+        <a class="menus" href="#div-sobre">Sobre nós</a>
         <a class="menus" href="#">Fale conosco</a>
         <a class="conectar" href="./login.html">Login</a>
         <a class="cadastro" href="./cadastro.html">Cadastro</a>
@@ -28,36 +28,109 @@
     <img class="img-fundo" src="./img/fundo-do-site.jfif">
 
     <div class="div-fundo-conteudo-flutuante">
-
         <div class="div_log">
 
         </div>
         <!-- ---------------------------- BOX LOGIN-INICIO---------------------------- -->
+        <!-- Seção Registro -->
+        <section class="container-register">
+            <!-- Formulário Registro -->
+            <div class="pag-login">
+                <div class="container">
+                    <div class="box-login">
+                        <h1>Faça seu cadastro</h1><br><br><br>
+                        <div class="login">
+                            <!-- Campo Nome -->
+                            <div class="input-register">
+                                <label for="">Nome:</label>
+                                <i class="form-input-icon"></i>
+                                <input id="input-name" onkeyup="validacao_name_register()" type="text"
+                                    placeholder="Digite seu nome">
+                                <span class="validation-false" id="msg_name_validation_register"></span>
+                            </div>
+                            <!-- Campo Sobrenome -->
+                            <div class="input-register">
+                                <label for="">Sobrenome:</label>
+                                <i class="form-input-icon"></i>
+                                <input id="ipt_lastname_register" onkeyup="validacao_lastname_register()" type="text"
+                                    placeholder="digite seu sobrenome">
+                                
+    
+                            </div>
 
-        <div class="pag-login">
-            <div class="container">
-                <div class="box-login">
-                    <h1>Faça aqui seu cadastro</h1><br><br><br>
-                    <div class="login">
-                        Nome completo:<br><input type="text" class="input-nome" placeholder="Digite seu nome"><br>
-                        CNPJ:*<br><input type="text" class="input-cnpj" placeholder="Digite seu CNPJ"><br>
-                        Email: <br><input type="text" class="input-padrao-login" placeholder="Digite seu email"><br>
-                        Senha:<br> <input type="password" class="input-padrao-senha" placeholder="Digite sua Senha"><br>
+                            <!-- Campo CNPJ -->
+                            <div class="form-input input-register">
+                                <label for="">CNPJ:</label> <br>
+                                <i class="fa fa-id-card-o form-input-icon"></i>
+                                <!-- Icone Validação -->
+                                <i class="validation-true" id="cnpj_register_true"></i>
+                                <i class="validation-false" id="cnpj_register_false"></i>
+                                <input id="input_cnpj" onkeyup="validacao_cnpj_register()" type="text"placeholder="000.000.000.0000/00"><br>
+                                <span class="form-validation-false" id="msg_cnpj_validation"></span>
+                            </div>
+                            <!-- Campo Login -->
+                            <div class="input-register">
+                                <label for="">Login:</label> <br>
+                               
+                                <!-- Icone Validação -->
+                                <i class="" id="senha_login_true"></i>
+                                <i class="validation-false" id="senha_login_false"></i>
+                                <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="text" placeholder="digite um login"><br>
+                                <span class="form-validation-false" id="msg_senha_validation_login"></span>
+                            </div>
+                        </div>
 
                         <div class="form-btn">
-                            <span class="msg-cadastrar">Já é registrado? <a href="login.html" target="blank"><b>Entrar</b></a></span>
+                            <span class="msg-cadastrar">Já é registrado?<a href="./login.html" target="blank">Entrar</a></span>
                             <br>
                             <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
                             <!-- Mensagem Validação -->
                             <span class="msg-validation" id="msg_register"></span>
-                            
+
                         </div>
-                        <button class="botao-verde" onclick="validacao_cadastro()" style="margin-top: 3vh; width: 7vw;">Registrar</button>
+                        <button class="botao-verde" onclick="validacao_cadastro()">Registrar</button>
                     </div>
 
-                    
-                </div>
 
+                </div>
+        </section>
 </body>
 
 </html>
+<script>
+    //Expressão CNPJ
+    var cnpjReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\.?[0-9]{4}\-?[0-9]{2}$/;
+   
+    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-Z]{1})(?=.*[a-z]{1})[a-zA-Z0-9]{6,}$/;
+
+    function validacao_cnpj_register() {
+        // Variáveis Login
+        var cnpj_login = input_cnpj.value;
+        // Verifica CNPJ
+        if (cnpj_login.match(cnpjReg)) {
+            msg_cnpj_validation.innerHTML = '';
+            cnpj_register_true.style.display = 'block';
+            cnpj_register_false.style.display = 'none';
+        } else {
+            msg_cnpj_validation.innerHTML = '<span style="color: #ff0000;">Insira um CNPJ válido</span>';
+            cnpj_register_false.style.display = 'block';
+            cnpj_register_true.style.display = 'none';
+        }
+    }
+
+    function validacao_senha_login() {
+        // Variáveis Senha
+        var senha_login = ipt_senha_login.value;
+        // Verifica Senha
+        if (senha_login.match(senhaReg)) {
+            msg_senha_validation_login.innerHTML = '';
+            senha_login_true.style.display = 'block';
+            senha_login_false.style.display = 'none';
+        } else {
+            msg_senha_validation_login.innerHTML = '<span style="color: #ff0000;">Insira uma senha válida</span>';
+            senha_login_false.style.display = 'block';
+            senha_login_true.style.display = 'none';
+        }
+    }
+
+</script>
