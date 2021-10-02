@@ -45,10 +45,10 @@ a:hover{
     position: absolute;
     margin-left: 0;
 }
-.verdecode-logo{
-    margin-top: 0.8%;
-    width: 23%;
-    margin-left: 2%;
+.mushsolution-logo{
+    margin-top: 0.2%;
+    width: 14%;
+    margin-left: 6%;
     position: absolute;
 }
 
@@ -56,8 +56,10 @@ a:hover{
     position: absolute;
     width: 99vh;
     margin-left: 35%;
-    margin-top: 2.5%;
-}.menus{
+    margin-top: 3%;
+
+}
+.menus{
     margin-left: 2%;
 }
 .conectar{
