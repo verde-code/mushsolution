@@ -37,7 +37,9 @@ a{
 }
 a:hover{
     color: #00e400;
+    transition: 0.2s;
 }
+
 .paragrafo-verde{
     background-color: #00e400;
     width: 100%;
@@ -69,6 +71,7 @@ a:hover{
 }
 .conectar:hover{
     color: white;
+    transition: 0.2s;
 }
 .cadastro{
     margin-left: 51vh;
@@ -159,6 +162,7 @@ a:hover{
 .botao-verde:hover{   
     background-color: #ffffff;
     color: #00e400;
+    transition: 0.2s;
 }
 .botao-branco{
     position: absolute;
@@ -175,6 +179,7 @@ a:hover{
 }
 .botao-branco:hover{
     color: #00e400;
+    transition: 0.2s;
 }
 
 input{
