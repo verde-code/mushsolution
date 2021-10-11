@@ -231,3 +231,8 @@ margin-top: 5vh;
     border: 2px solid #00e400;
     border-radius: 5px; 
 }
+
+.container input{
+    justify-content: center;
+    
+}
