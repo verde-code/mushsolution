@@ -213,12 +213,13 @@ margin-top: 5vh;
 
 #div-dash .b-verde{
     position: absolute;
-    margin-top: 26vw;
-    padding-left: 50vw;   
+    margin-top: 25.5vw;
+    padding-left: 48.8vw;   
 }
-#div-dash .b-branco{
+#div-dash .b-cinza{
+    color: gray;
     position: absolute;
-    margin-top: 26vw;
+    margin-top: 25.5vw;
     padding-left: 46vw;   
 }
 .dashboard{
