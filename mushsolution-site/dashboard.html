@@ -132,7 +132,7 @@
         
         var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
  
-        if(temperatura >= 24.3 && temperatura <= 24.6){
+        if(temperatura >= 24.0 && temperatura <= 26.0){
             configuration.data.datasets[0].label = "Ideal";
             configuration.data.datasets[0].borderColor = ['#00e400'];
             configuration.data.datasets[0].backgroundColor = ['#006d00'];
@@ -140,7 +140,7 @@
             (document.getElementById('lb_temperatura').style.color = '#00e400',
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-        }else if(temperatura >= 24.2 && temperatura <= 24.8){
+        }else if(temperatura >= 23.0 && temperatura <= 27.0){
             configuration.data.datasets[0].label = "Moderado";
             configuration.data.datasets[0].borderColor = ['#FFF000'];
             configuration.data.datasets[0].backgroundColor = ['#BDB200'];
@@ -148,7 +148,7 @@
             (document.getElementById('lb_temperatura').style.color = '#FFF000',
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-        }else if(temperatura >= 24.05 && temperatura <= 24.95){
+        }else if(temperatura >= 22.0 && temperatura <= 28.0){
             configuration.data.datasets[0].label = "Alto";
             configuration.data.datasets[0].borderColor = ['#FFAE00'];
             configuration.data.datasets[0].backgroundColor = ['#BD8100'];
@@ -156,7 +156,7 @@
             (document.getElementById('lb_temperatura').style.color = '#FFAE00',
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-        }if(temperatura <= 24 || temperatura >= 25){
+        }if(temperatura <= 21.0 || temperatura >= 29.-){
             configuration.data.datasets[0].label = "Critico";
             configuration.data.datasets[0].borderColor = ['#B80D0D'];
             configuration.data.datasets[0].backgroundColor = ['#810B0B'];
