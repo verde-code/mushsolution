@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;800&family=Poppins&display=swap%27');
-  
-
 
 * {
+    max-width: 99vw;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-} 
+}
 
 html{
     scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+}
+
+.div-header{
+    position: sticky;
 }
 
 body{
@@ -24,14 +31,13 @@ body{
     padding: 0;
     position: absolute;
 }
-
-.div-header{
-    position: sticky;
-}
-
 a{
     color: white;
     text-decoration: none;
+}
+a:hover{
+    color: #00e400;
+    transition: 0.2s;
 }
 
 .paragrafo-verde{
@@ -41,7 +47,6 @@ a{
     position: absolute;
     margin-left: 0;
 }
-
 .mushsolution-logo{
     margin-top: 0.2%;
     width: 14%;
@@ -56,19 +61,17 @@ a{
     margin-top: 3%;
 
 }
-
-.div-fundo-conteudo{
+.menus{
+    margin-left: 2%;
+}
+.conectar{
+    color: #00e400;
+    margin-left: 43vh;
     position: absolute;
-    margin-top: 11%;
-    background-color: rgba(000, 000, 000, 0.89);
-    width: 100%;
-    height: 60%;
-    border-style: solid;
-    border-color: #00e400;
-    border-width: 0.5%;
-    border-left: none;
-    border-right: none;
-    display: flex;
+}
+.conectar:hover{
+    color: white;
+    transition: 0.2s;
 }
 
 .img-fundo{
@@ -78,14 +81,115 @@ a{
     width: 99vw;
     height: 100vh;
 }
+.div-fundo-conteudo{
+    position: absolute;
+    margin-top: 11%;
+    background-color: rgba(000, 000, 000, 0.89);
+    width: 100%;
+    height: 80%;
+    border-style: solid;
+    border-color: #00e400;
+    border-width: 0.5%;
+    border-left: none;
+    border-right: none;
+    display: flex;
+}
+.div-fundo-conteudo-flutuante{
+    position: absolute;
+    margin-top: 12vw;
+    margin-left: 63vh;
+    background-color: rgba(000, 000, 000, 0.9);
+    width: 40%;
+    height: 80%;
+    border-style: solid;
+    border-color: #00e400;
+    border-width: 0.5%;
+    border-left: 0.5%;
+    border-right: 0.5%;
+    display: flex;
+    border-radius: 15px;
+    padding-bottom: 3%;
+}
 
-input{
-    width: 14.5vw;
-    height: 5vh;
-    border-radius: 9px;
+.b-verde{
+    color: #00e400;
+}
+
+.botao-verde{
+    position: absolute;
+    background-color: #00e400;
+    color: #ffffff;
     border: none;
+    min-height: 7vh;
+    max-height: 7vh;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
     padding-left: 2%;
-    outline: none;
+    padding-right: 2%;
+    border-radius: 8px;
 }
 
 
+.img-sobre{
+    /*  position: absolute; */
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+      margin-left: 9vh;
+      width: 39vw;
+      height: 50vh;
+      border-radius: 5px;
+      border: #00e400 solid 3px;
+}
+
+.dashboard{
+    margin-left: 30vw; 
+    margin-top: 20vh;
+    padding-top: 5vh; 
+    width:80px;
+    height: 80px;
+    background-color: white;
+    border: 2px solid #00e400;
+    border-radius: 5px; 
+}
+
+
+/* Fale Conosco */
+
+h3 {
+    margin-top: 10px;
+    color: #ffffff;
+    align-items: center;
+    
+}
+
+.container-contato{
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+.container-contato .btn-enviar{
+    position: absolute;
+    background-color: #00e400;
+    color: #ffffff;
+    border: none;
+    min-height: 7vh;
+    max-height: 7vh;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 8px;
+}
+
+.container-contato input{
+    border-radius: 5px;
+    justify-self: center;
+    font-size: medium;
+    background-color: #ffffff00;
+    color: #00e400;
+    font-weight: bold;
+    width: 300px;
+    height: 30px;
+}

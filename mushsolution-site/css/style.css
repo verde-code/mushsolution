@@ -237,3 +237,18 @@ margin-top: 5vh;
     justify-content: center;
     
 }
+
+/* Fale Conosco */
+
+.container-contato{
+    justify-content: center;
+    align-content: center;
+
+}
+
+.container button{
+    background-color: #00e400;
+    width: auto;
+    height: auto;
+}
+    
