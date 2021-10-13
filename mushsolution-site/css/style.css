@@ -240,15 +240,23 @@ margin-top: 5vh;
 
 /* Fale Conosco */
 
-.container-contato{
-    justify-content: center;
-    align-content: center;
-
+#div-contato{
+    margin-left: 57vh;
+    width: 45%;
 }
 
-.container button{
-    background-color: #00e400;
-    width: auto;
-    height: auto;
+.container-contato-left{
+    margin-left: 4.5vw;
+    margin-top: 3.6vh;  
 }
-    
+
+.container-contato-right{
+    margin-left: 3vw;   
+    margin-top: 7.2vh;
+}
+
+.container-contato-right .ipt-descricao{
+    height: 5vh;
+    padding-left: 5%;
+    padding-bottom: 30%;
+}
