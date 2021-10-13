@@ -40,8 +40,8 @@
         <b class="carrossel-titulo">Sensor LM35 - Temperatura</b>
         <section>
             <b class="b-cinza">Média:</b> <b class="b-verde"><label id='average'>0.00</label></b>
-            <b class="b-cinza" style="margin-top: 24.6vw; padding-left: 45.85vw;">Temperatura:</b> 
-            <b class="b-verde" style="margin-top: 24.6vw; padding-left: 51.3vw;"><label id='lb_temperatura'>0.00</label></b>
+            <b class="b-cinza" style="margin-top: 24.2vw; padding-left: 45.85vw;">Temperatura:</b> 
+            <b class="b-verde" style="margin-top: 24.2vw; padding-left: 53.6vw;"><label id='lb_temperatura'>0.00</label></b>
         </section>
         <section class="dashboard">
             <canvas id="chart"></canvas>
@@ -133,11 +133,7 @@
         
         var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
  
-<<<<<<< HEAD
-        if(temperatura >= 24.0 && temperatura <= 26.0){
-=======
         if(temperatura >= 24 && temperatura <= 26){
->>>>>>> d7524738a2e603169107cc2b71fc18dd5d4dccba
             configuration.data.datasets[0].label = "Ideal";
             configuration.data.datasets[0].borderColor = ['#01b5ff'];
             configuration.data.datasets[0].backgroundColor = ['#006f9d'];
@@ -153,32 +149,15 @@
             (document.getElementById('lb_temperatura').style.color = '#00e400',
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-<<<<<<< HEAD
-        }else if(temperatura >= 23.0 && temperatura <= 27.0){
-            configuration.data.datasets[0].label = "Moderado";
-=======
         }else if(temperatura >= 22 && temperatura <= 28){
             configuration.data.datasets[0].label = "Alto";
->>>>>>> d7524738a2e603169107cc2b71fc18dd5d4dccba
             configuration.data.datasets[0].borderColor = ['#FFF000'];
             configuration.data.datasets[0].backgroundColor = ['#BDB200'];
             setTimeout(
             (document.getElementById('lb_temperatura').style.color = '#FFF000',
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-<<<<<<< HEAD
-        }else if(temperatura >= 22.0 && temperatura <= 28.0){
-            configuration.data.datasets[0].label = "Alto";
-            configuration.data.datasets[0].borderColor = ['#FFAE00'];
-            configuration.data.datasets[0].backgroundColor = ['#BD8100'];
-            setTimeout(
-            (document.getElementById('lb_temperatura').style.color = '#FFAE00',
-            document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
-
-        }if(temperatura <= 21.0 || temperatura >= 29.-){
-=======
         }if(temperatura < 21.9 || temperatura >28){
->>>>>>> d7524738a2e603169107cc2b71fc18dd5d4dccba
             configuration.data.datasets[0].label = "Critico";
             configuration.data.datasets[0].borderColor = ['#B80D0D'];
             configuration.data.datasets[0].backgroundColor = ['#810B0B'];
