@@ -16,6 +16,10 @@ header{
     position: sticky;
 }
 
+button{
+    cursor: pointer;
+}
+
 .div-header{
     position: sticky;
 }
@@ -97,6 +101,10 @@ a:hover{
     border-right: none;
     display: flex;
 }
+.dadosgrafico{
+    margin-top: 1.5vw;
+}
+
 .div-fundo-conteudo-flutuante{
     position: absolute;
     margin-top: 12vw;
@@ -252,5 +260,27 @@ input{
 }
 
 
+#div-contato{
+    margin-left: 57vh;
+    width: 45%;
+}
 
+<<<<<<< HEAD
 
+=======
+.container-contato-left{
+    margin-left: 4.5vw;
+    margin-top: 3.6vh;  
+}
+
+.container-contato-right{
+    margin-left: 3vw;   
+    margin-top: 7.2vh;
+}
+
+.container-contato-right .ipt-descricao{
+    height: 5vh;
+    padding-left: 5%;
+    padding-bottom: 30%;
+}
+>>>>>>> 5a0183ede8437c3d54a4a0f59b0ecb131c78f7ab

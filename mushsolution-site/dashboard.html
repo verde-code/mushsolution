@@ -38,10 +38,11 @@
 
     <div id="div-dash" class="div-fundo-conteudo">
         <b class="carrossel-titulo">Sensor LM35 - Temperatura</b>
-        <section>
-            <b class="b-cinza">Média:</b> <b class="b-verde"><label id='average'>0.00</label></b>
+        <section class="dadosgrafico">
+            <b class="b-cinza">Média:</b> <b class="b-verde"><label id='average'>00.00°C</label></b>
             <b class="b-cinza" style="margin-top: 24.2vw; padding-left: 45.85vw;">Temperatura:</b> 
-            <b class="b-verde" style="margin-top: 24.2vw; padding-left: 53.6vw;"><label id='lb_temperatura'>0.00</label></b>
+            <b class="b-verde" style="margin-top: 24.2vw; padding-left: 53.6vw;">
+            <label id='lb_temperatura'>00.00°C</label></b>
         </section>
         <section class="dashboard">
             <canvas id="chart"></canvas>
@@ -59,9 +60,33 @@
         type: 'line',
         data: {
             datasets: [{
-                label: "Ideal",
+                label: ["Atual - Ideal"],
                 type: 'line',
                 borderColor: ['#01b5ff'],
+                backgroundColor: ['#006f9d'],
+            },
+            {
+                label: ["Critico"],
+                type: 'line',
+                borderColor: ['#fff'],
+                backgroundColor: ['#810B0B'],
+            },
+            {
+                label: ["Alto"],
+                type: 'line',
+                borderColor: ['#fff'],
+                backgroundColor: ['#BDB200'],
+            },
+            {
+                label: ["Moderado"],
+                type: 'line',
+                borderColor: ['#fff'],
+                backgroundColor: ['#006d00'],
+            },
+            {
+                label: ["Ideal"],
+                type: 'line',
+                borderColor: ['#fff'],
                 backgroundColor: ['#006f9d'],
             }]
         },
@@ -130,11 +155,11 @@
             chart.data.datasets[0].data.push(parseFloat(data));
             chart.update();
         });
-        
+        //Alertas
         var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
  
         if(temperatura >= 24 && temperatura <= 26){
-            configuration.data.datasets[0].label = "Ideal";
+            configuration.data.datasets[0].label = "Atual - Ideal";
             configuration.data.datasets[0].borderColor = ['#01b5ff'];
             configuration.data.datasets[0].backgroundColor = ['#006f9d'];
             setTimeout(
@@ -142,7 +167,7 @@
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
         }else if(temperatura >= 23 && temperatura <= 27){
-            configuration.data.datasets[0].label = "Moderado";
+            configuration.data.datasets[0].label = "Atual - Moderado";
             configuration.data.datasets[0].borderColor = ['#00e400'];
             configuration.data.datasets[0].backgroundColor = ['#006d00'];
             setTimeout(
@@ -150,7 +175,7 @@
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
         }else if(temperatura >= 22 && temperatura <= 28){
-            configuration.data.datasets[0].label = "Alto";
+            configuration.data.datasets[0].label = "Atual - Alto";
             configuration.data.datasets[0].borderColor = ['#FFF000'];
             configuration.data.datasets[0].backgroundColor = ['#BDB200'];
             setTimeout(
@@ -158,7 +183,7 @@
             document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
         }if(temperatura < 21.9 || temperatura >28){
-            configuration.data.datasets[0].label = "Critico";
+            configuration.data.datasets[0].label = "Atual - Critico";
             configuration.data.datasets[0].borderColor = ['#B80D0D'];
             configuration.data.datasets[0].backgroundColor = ['#810B0B'];
             setTimeout(
