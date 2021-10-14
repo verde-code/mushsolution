@@ -16,6 +16,10 @@ header{
     position: sticky;
 }
 
+button{
+    cursor: pointer;
+}
+
 .div-header{
     position: sticky;
 }
@@ -97,6 +101,10 @@ a:hover{
     border-right: none;
     display: flex;
 }
+.dadosgrafico{
+    margin-top: 1.5vw;
+}
+
 .div-fundo-conteudo-flutuante{
     position: absolute;
     margin-top: 12vw;
