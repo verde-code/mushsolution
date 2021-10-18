@@ -9,13 +9,6 @@
     <link rel="icon" href="./img/favicon/favicon-cropped.ico">
 	<script src="./js/moment.min.js"></script>
 	<script src="./js/Chart.js"></script>
-	<style>
-		canvas {
-			-moz-user-select: none;
-			-webkit-user-select: none;
-			-ms-user-select: none;
-		}
-	</style>
 </head>
 <body class="corpo">
     <img class="mushsolution-logo" src="./img/mushsolution-logo.png">
@@ -51,11 +44,10 @@
 </body>
 </html>
 <script>
-
     var context = document.getElementById("chart").getContext("2d");
     context.canvas.width = 1000;
     context.canvas.height = 300;
-    
+
     var configuration = {
         type: 'line',
         data: {
@@ -118,12 +110,12 @@
             }
         }
     };
-    
+
     var chart = new Chart(context, configuration);
 
     //Função para obter os dados de temperatura do server
     //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
-    
+
     //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
     //hora de montar/atualizar o gráfico
     this.lastIndexTemp = 0;
@@ -155,46 +147,44 @@
             chart.data.datasets[0].data.push(parseFloat(data));
             chart.update();
         });
-        //Alertas
-        var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
- 
-        if(temperatura >= 24 && temperatura <= 26){
-            configuration.data.datasets[0].label = "Atual - Ideal";
-            configuration.data.datasets[0].borderColor = ['#01b5ff'];
-            configuration.data.datasets[0].backgroundColor = ['#006f9d'];
-            setTimeout(
-            (document.getElementById('lb_temperatura').style.color = '#01b5ff',
-            document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+            //Alertas
+            var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
 
-        }else if(temperatura >= 23 && temperatura <= 27){
-            configuration.data.datasets[0].label = "Atual - Moderado";
-            configuration.data.datasets[0].borderColor = ['#00e400'];
-            configuration.data.datasets[0].backgroundColor = ['#006d00'];
-            setTimeout(
-            (document.getElementById('lb_temperatura').style.color = '#00e400',
-            document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+            if(temperatura >= 24 && temperatura <= 26){
+                configuration.data.datasets[0].label = "Atual - Ideal";
+                configuration.data.datasets[0].borderColor = ['#01b5ff'];
+                configuration.data.datasets[0].backgroundColor = ['#006f9d'];
+                setTimeout(
+                (document.getElementById('lb_temperatura').style.color = '#01b5ff',
+                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-        }else if(temperatura >= 22 && temperatura <= 28){
-            configuration.data.datasets[0].label = "Atual - Alto";
-            configuration.data.datasets[0].borderColor = ['#FFF000'];
-            configuration.data.datasets[0].backgroundColor = ['#BDB200'];
-            setTimeout(
-            (document.getElementById('lb_temperatura').style.color = '#FFF000',
-            document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+            }else if(temperatura >= 23 && temperatura <= 27){
+                configuration.data.datasets[0].label = "Atual - Moderado";
+                configuration.data.datasets[0].borderColor = ['#00e400'];
+                configuration.data.datasets[0].backgroundColor = ['#006d00'];
+                setTimeout(
+                (document.getElementById('lb_temperatura').style.color = '#00e400',
+                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-        }if(temperatura < 21.9 || temperatura >28){
-            configuration.data.datasets[0].label = "Atual - Critico";
-            configuration.data.datasets[0].borderColor = ['#B80D0D'];
-            configuration.data.datasets[0].backgroundColor = ['#810B0B'];
-            setTimeout(
-            (document.getElementById('lb_temperatura').style.color = '#B80D0D',
-            document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
-        };
-        document.getElementById('average').textContent = `${obj.average}°C`;
-    } 
+            }else if(temperatura >= 22 && temperatura <= 28){
+                configuration.data.datasets[0].label = "Atual - Alto";
+                configuration.data.datasets[0].borderColor = ['#FFF000'];
+                configuration.data.datasets[0].backgroundColor = ['#BDB200'];
+                setTimeout(
+                (document.getElementById('lb_temperatura').style.color = '#FFF000',
+                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-    setInterval(() => {
-        get_data();
-    }, 1000);
-
+            }if(temperatura < 21.9 || temperatura >28){
+                configuration.data.datasets[0].label = "Atual - Critico";
+                configuration.data.datasets[0].borderColor = ['#B80D0D'];
+                configuration.data.datasets[0].backgroundColor = ['#810B0B'];
+                setTimeout(
+                (document.getElementById('lb_temperatura').style.color = '#B80D0D',
+                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+            };
+            document.getElementById('average').textContent = `${obj.average}°C`;
+        } 
+        setInterval(() => {
+            get_data();
+        }, 1000);
 </script>

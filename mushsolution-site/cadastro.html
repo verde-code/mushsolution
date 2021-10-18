@@ -66,24 +66,22 @@
                                 <!-- Icone Validação -->
                                 <i class="validation-true" id="cnpj_register_true"></i>
                                 <i class="validation-false" id="cnpj_register_false"></i>
-                                <input id="input_cnpj" onkeyup="validacao_cnpj_register()" type="text"placeholder="000.000.000.0000/00"><br>
+                                <input id="input_cnpj" onkeyup="npj_register()" type="text"placeholder="000.000.000.0000/00"><br>
                                 <span class="form-validation-false" id="msg_cnpj_validation"></span>
                             </div>
                             <!-- Campo Login -->
                             <div class="input-register">
-                                <label for="">Login:</label> <br>
-                               
+                                <label for="">Senha (!-?, A-b, 0-9):</label> <br>
                                 <!-- Icone Validação -->
                                 <i class="" id="senha_login_true"></i>
                                 <i class="validation-false" id="senha_login_false"></i>
-                                <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="text" placeholder="digite um login"><br>
+                                <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="password" placeholder="Digite uma senha">
                                 <span class="form-validation-false" id="msg_senha_validation_login"></span>
+                                <span class="msg-cadastrar">Já é registrado? <a href="./login.html" target="blank"><b>Entrar</b></a></span>
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-btn">
-                            <span class="msg-cadastrar">Já é registrado?<a href="./login.html" target="blank">Entrar</a></span>
-                            <br>
                             <!-- ---------------------------- BOX LOGIN-FIM---------------------------- -->
                             <!-- Mensagem Validação -->
                             <span class="msg-validation" id="msg_register"></span>
@@ -91,8 +89,6 @@
                         </div>
                         <button class="botao-verde" onclick="validacao_cadastro()">Registrar</button>
                     </div>
-
-
                 </div>
         </section>
 </body>
@@ -102,7 +98,8 @@
     //Expressão CNPJ
     var cnpjReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\.?[0-9]{4}\-?[0-9]{2}$/;
    
-    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-Z]{1})(?=.*[a-z]{1})[a-zA-Z0-9]{6,}$/;
+    let senhaForte = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+    let senhaMedia = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
 
     function validacao_cnpj_register() {
         // Variáveis Login
@@ -123,12 +120,18 @@
         // Variáveis Senha
         var senha_login = ipt_senha_login.value;
         // Verifica Senha
-        if (senha_login.match(senhaReg)) {
-            msg_senha_validation_login.innerHTML = '';
+        if (senha_login.match(senhaForte)) {
+            msg_senha_validation_login.innerHTML = '<span style="color: #00e400;">Senha Forte<br></span>';
             senha_login_true.style.display = 'block';
             senha_login_false.style.display = 'none';
-        } else {
-            msg_senha_validation_login.innerHTML = '<span style="color: #ff0000;">Insira uma senha válida</span>';
+        }else if (senha_login.match(senhaMedia)) {
+            msg_senha_validation_login.innerHTML = '<span style="color: #e4cd00;">Senha Média<br></span>';
+            senha_login_true.style.display = 'block';
+            senha_login_false.style.display = 'none';
+        }else if(senha_login == ''){
+            msg_senha_validation_login.innerHTML = '';
+        }else{
+            msg_senha_validation_login.innerHTML = '<span style="color: #ff0000;">Senha Fraca<br></span>';
             senha_login_false.style.display = 'block';
             senha_login_true.style.display = 'none';
         }
