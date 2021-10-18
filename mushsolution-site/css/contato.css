@@ -8,22 +8,12 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-canvas {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
 html{
     scroll-behavior: smooth;
 }
 
 header{
     position: sticky;
-}
-
-button{
-    cursor: pointer;
 }
 
 .div-header{
@@ -83,10 +73,7 @@ a:hover{
     color: white;
     transition: 0.2s;
 }
-.cadastro{
-    margin-left: 51vh;
-    position: absolute;
-}
+
 .img-fundo{
     position: absolute;
     margin-top: 6.9%;
@@ -99,7 +86,7 @@ a:hover{
     margin-top: 11%;
     background-color: rgba(000, 000, 000, 0.89);
     width: 100%;
-    height: 60%;
+    height: 80%;
     border-style: solid;
     border-color: #00e400;
     border-width: 0.5%;
@@ -107,17 +94,13 @@ a:hover{
     border-right: none;
     display: flex;
 }
-.dadosgrafico{
-    margin-top: 1.5vw;
-}
-
 .div-fundo-conteudo-flutuante{
     position: absolute;
     margin-top: 12vw;
     margin-left: 63vh;
     background-color: rgba(000, 000, 000, 0.9);
     width: 40%;
-    height: 90%;
+    height: 80%;
     border-style: solid;
     border-color: #00e400;
     border-width: 0.5%;
@@ -126,39 +109,6 @@ a:hover{
     display: flex;
     border-radius: 15px;
     padding-bottom: 3%;
-}
-.carrossel{
-  /*  position: absolute; */
-    margin-top: 2vw;
-    margin-bottom: 1vw;
-    margin-left: 9vh;
-    width: 39vw;
-    height: 50vh;
-    border-radius: 5px;
-    border: #00e400 solid 3px;
-}
-.carrossel-titulo{
-    margin-top: 2vw;
-    padding-left: 55%;
-    position: absolute;
-    font-size:210%;
-    width: 40%;
-}
-.carrossel-texto{
-    position: absolute;
-    padding-left: 55%;
-    margin-top: 11.8%;
-    width: 40%;
-    font-size: 115%;
-    height: 0%;
-    font-weight: normal;
-    text-align: justify;
-}
-
-.div-serviços h3 {
-    font-size: 110%;
-    font-weight: normal;
-    text-align: justify;
 }
 
 .b-verde{
@@ -179,37 +129,8 @@ a:hover{
     padding-right: 2%;
     border-radius: 8px;
 }
-.botao-verde:hover{   
-    background-color: #ffffff;
-    color: #00e400;
-    transition: 0.2s;
-}
-.botao-branco{
-    position: absolute;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    width: 8%;
-    min-height: 7vh;
-    max-height: 7vh;
-    font-weight: bold;
-    text-align: center;
-    font-size: 95%;
-    border-radius: 6px;
-}
-.botao-branco:hover{
-    color: #00e400;
-    transition: 0.2s;
-}
 
-input{
-    width: 14.5vw;
-    height: 5vh;
-    border-radius: 9px;
-    border: none;
-    padding-left: 2%;
-    outline: none;
-}
+
 .img-sobre{
     /*  position: absolute; */
       margin-top: 2vw;
@@ -220,70 +141,55 @@ input{
       border-radius: 5px;
       border: #00e400 solid 3px;
 }
-.class_p{
-    position: center;
-    padding-left:5px;
-    margin-top:1%;
-    width: 30%;
-    font-size: 80%;
-    height: 30%;
-    font-weight: normal;
-    text-align: justify;
-    
 
-}
-
-#div-dash .carrossel-titulo{
-    margin-top: 1vw;
-    padding-left: 34vw;   
-}
-
-#div-dash .b-verde{
-    position: absolute;
-    margin-top: 25.7vw;
-    padding-left: 50vw;   
-}
-#div-dash .b-cinza{
-    color: gray;
-    position: absolute;
-    margin-top: 25.7vw;
-    padding-left: 46vw;   
-}
 .dashboard{
-    margin-left: 21vw; 
-    margin-top: 11vh;
-    padding-top: 2vh; 
-    width:60%;
-    height: 65%;
+    margin-left: 30vw; 
+    margin-top: 20vh;
+    padding-top: 5vh; 
+    width:80px;
+    height: 80px;
     background-color: white;
     border: 2px solid #00e400;
     border-radius: 5px; 
 }
 
-.container input{
-    justify-content: center;
+
+/* Fale Conosco */
+
+h3 {
+    margin-top: 10px;
+    color: #ffffff;
+    align-items: center;
     
 }
 
-
-#div-contato{
-    margin-left: 57vh;
-    width: 45%;
-    height: 600px;
+.container-contato{
+    margin-left: 70px;
+    margin-top: 50px;
 }
 
-.container-contato-left{
-    margin-left: 4.5vw;
-    margin-top: 3.6vh;  
+.container-contato .btn-enviar{
+    position: absolute;
+    background-color: #00e400;
+    color: #ffffff;
+    border: none;
+    min-height: 7vh;
+    max-height: 7vh;
+    font-weight: bold;
+    text-align: center;
+    font-size: 95%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 8px;
 }
 
-.container-contato-right{
-    margin-left: 3vw;   
-    margin-top: 7.2vh;
-}
-
-.container-contato-right .ipt-descricao{
-    height: 5vh;
-    padding-left: 5%;
-    padding-bottom: 30%;
+.container-contato input{
+    border-radius: 5px;
+    justify-self: center;
+    font-size: medium;
+    background-color: #ffffff00;
+    color: #00e400;
+    font-weight: bold;
+    width: 300px;
+    height: 30px;
 }

@@ -101,20 +101,6 @@
     let senhaForte = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
     let senhaMedia = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
 
-    function validacao_cnpj_register() {
-        // Variáveis Login
-        var cnpj_login = input_cnpj.value;
-        // Verifica CNPJ
-        if (cnpj_login.match(cnpjReg)) {
-            msg_cnpj_validation.innerHTML = '';
-            cnpj_register_true.style.display = 'block';
-            cnpj_register_false.style.display = 'none';
-        } else {
-            msg_cnpj_validation.innerHTML = '<span style="color: #ff0000;">Insira um CNPJ válido</span>';
-            cnpj_register_false.style.display = 'block';
-            cnpj_register_true.style.display = 'none';
-        }
-    }
 
     function validacao_senha_login() {
         // Variáveis Senha

@@ -41,7 +41,6 @@
         if (cnpj_login.match(cnpjReg) && senha_login.match(senhaReg)) {
             msg_login.style.display = 'none';
         } else {
-
         }
     }function validar(){
         cpf_login = ipt_cpf_login.value;
