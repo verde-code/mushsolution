@@ -45,7 +45,7 @@
                             <div class="input-register">
                                 <label for="">Nome:</label>
                                 <i class="form-input-icon"></i>
-                                <input id="input-name" onkeyup="validacao_name_register()" type="text"
+                                <input id="ipt_nome" onkeyup="validacao_name_register()" type="text"
                                     placeholder="Digite seu nome">
                                 <span class="validation-false" id="msg_name_validation_register"></span>
                             </div>
@@ -60,7 +60,7 @@
                             </div>
 
                             <!-- Campo CNPJ -->
-                            <div class="form-input input-register">
+                            <div class="input-register" style="margin-bottom: 0;">
                                 <label for="">CNPJ:</label> <br>
                                 <i class="fa fa-id-card-o form-input-icon"></i>
                                 <!-- Icone Validação -->
@@ -71,7 +71,7 @@
                             </div>
                             <!-- Campo Login -->
                             <div class="input-register">
-                                <label for="">Senha (!-?, A-b, 0-9):</label> <br>
+                                <label for="">Senha:</label>
                                 <!-- Icone Validação -->
                                 <i class="" id="senha_login_true"></i>
                                 <i class="validation-false" id="senha_login_false"></i>
@@ -97,7 +97,6 @@
 <script>
     //Expressão CNPJ
     var cnpjReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\.?[0-9]{4}\-?[0-9]{2}$/;
-   
     let senhaForte = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
     let senhaMedia = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
 
@@ -120,6 +119,36 @@
             msg_senha_validation_login.innerHTML = '<span style="color: #ff0000;">Senha Fraca<br></span>';
             senha_login_false.style.display = 'block';
             senha_login_true.style.display = 'none';
+        }
+    }
+    function validacao_cadastro(){
+        var nome = ipt_nome.value;
+        var senha_login = ipt_senha_login.value;
+        // Verifica Cadastro
+        if (senha_login.match(senhaForte)) {
+            if(nome == ""){
+                alert(`Preencha os campos corretamente!`)
+            }else{
+            alert(`${nome}, seu cadastro registrado com sucesso!`)
+            window.location.href = './dashboard.html';}
+        }else if (senha_login.match(senhaMedia)) {
+            if(nome == ""){
+                alert(`Preencha os campos corretamente!`)
+            }else{
+            alert(`${nome}, seu cadastro registrado com sucesso!`)
+            window.location.href = './dashboard.html';}
+        }else if(senha_login == ''){
+            if(nome == ""){
+                alert(`Preencha os campos corretamente!`)
+            }else{
+                alert(`${nome}, digite uma senha média ou forte!`)
+            window.location.href = './dashboard.html';}
+        }else{
+            if(nome == ""){
+                alert(`Preencha os campos corretamente!`)
+            }else{
+                alert(`${nome}, digite uma senha média ou forte!`)
+            window.location.href = './dashboard.html';}
         }
     }
 

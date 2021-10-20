@@ -21,7 +21,7 @@
 
 }
 
-#input-name{
+#ipt_nome{
   display: flex;
   height: 35px;
   border-radius: 6px;
@@ -36,7 +36,6 @@
 }
 
 #input_cnpj{
-  display: flex;
   height: 35px;
   border-radius: 6px;
   
