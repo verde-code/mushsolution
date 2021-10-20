@@ -49,6 +49,7 @@
                 window.location.href = './dashboard.html';
         }else{
             msg_login.style.display = 'block';
-            msg_login.innerHTML = 'CNPJ ou Senha inválida. Tente novamente';
+            msg_login.style.color = '#ff0000';
+            msg_login.innerHTML = 'CNPJ ou Senha inválida. Tente novamente.';
         }
     }
