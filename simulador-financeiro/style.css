@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+    background-image: url(cogu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    position: fixed;
+}
+
+.corpo {
+    height: 320px;
+    background-color: rgba(000, 000, 000, 0.65);
+    position: fixed;
+    margin-top: 13%;
+    margin-left: 35.9%;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+}
+
+.titulo {
+    margin: 0;
+    margin-top: 5%;
+    margin-left: 14%;
+    color: #00e400;
+}
+
+.subtitulo {
+    margin: 0;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+input {
+    border-radius: 8px;
+    height: 30px;
+    width: 200px;
+    margin-left: 4%;
+    border:none;
+    padding-left: 2%;
+}
+
+button {
+    border-radius: 4px;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    border: none;
+    height: 30px;
+    color: white;
+    background-color: #00b600;
+}
+
+.msg_resultado {
+    margin-top: 50px;
+    height: 20px;
+    width: 400px;
+}
+
+.caixa {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: Arial;
+    margin-top: 120px;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ganho {
+    color: #00b600;
+}
