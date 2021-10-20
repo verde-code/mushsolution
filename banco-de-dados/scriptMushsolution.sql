@@ -35,10 +35,10 @@ foreign key (fk_empresa) references Empresa(idEmpresa)
 
 insert into Funcionario (nomeFuncionario, sobrenomeFuncionario, celular, cargo, cpf, login, senha, fk_Empresa)
 values 
-('Jorge', 'Silva', 11678905432, 'Gerente', 56789754321, 'Jorge.silva@maxmush.com.br', '@B12345c', 1),
-('Renata', 'Souza', 11973300488, 'PO', 23456788903, 'renata.melo@cocobambu.com', 'Coco@3454',2),
-('Pedro', 'Nascimento', 11955223315, 456788906453,'Encarregado', 'pedro.nascimento@cogumelosbr.com', 'cogubr@1111',3),
-('Mariana', 'Costa',119087645432, 'Analista', 4567890675443,'Mariana.costa@chuang.com', '@D12345k' , 4);
+('Jorge', 'Silva', 11678905432, 'Gerente', 56789754321, 'Jorge.silva@bandtec.com.br', '@B12345c', 1),
+('Renata', 'Souza', 11973300488, 'PO', 23456788903, 'renata.melo@bandtec.com.br', 'Coco@3454',2),
+('Pedro', 'Nascimento', 11955223315,'Encarregado', 456788906453, 'pedro.nascimento@bandtec.com.br', 'cogubr@1111',3),
+('Mariana', 'Costa',119087645432, 'Analista', 4567890675443,'Mariana.costa@bandtec.com.br', '@D12345k' , 4);
 
 select * From Funcionario;
 

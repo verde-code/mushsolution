@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
     <link rel="icon" href="./img/favicon/favicon-cropped.ico">
-    <link rel="stylesheet" href="./JS/login.js">
+    <script src="./js/login.js"></script>
 </head>
 
 <body class="corpo">
@@ -62,24 +62,19 @@
                     <i class="validation-true" id="senha_login_true"></i>
                     <i class="icon-validation-false" id="senha_login_false"></i>
                     <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="password"
-                        placeholder="Digite sua senha" />
+                        placeholder="Digite sua senha"/>
                     <span class="form-validation-false" id="msg_senha_validation_login"></span>
                 </div>
 
                 <!-- Botão Login -->
                 <div class="form-btn">
-                    <span class="msg-cadastrar">Não possuí cadastro? <a
-                            href="cadastro.html"><b>Registre-se</b></a><br></span>
+                    <span class="msg-validation" id="msg_login"></span>
+                    <span class="msg-cadastrar">Não possuí cadastro? 
+                    <a href="cadastro.html"><b>Registre-se</b></a><br></span>
                     <button class="botao-verde" onclick="validar()">Entrar</button>
                     <!-- Mensagem Validação -->
-                    <span class="msg-validation" id="msg_login"></span>
                 </div>
-
             </div>
         </section>
-
-
-        <script src="./JS/login.js"></script>
 </body>
-
 </html>
