@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,23 @@
     <title>MushSolution - Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon/favicon-cropped.ico">
-	<script src="./js/moment.min.js"></script>
-	<script src="./js/Chart.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/Chart.js"></script>
 </head>
+
 <body class="corpo">
     <img class="mushsolution-logo" src="./img/mushsolution-logo.png">
-    
+
     <header>
-    <div id="div-header" class="div-projetos">
-        <a href="./index.html">Inicio</a>
-        <a class="menus" href="#div-tecnologia">Tecnologias</a>
-        <a class="menus" href="#div-servicos">Serviços</a>
-        <a class="menus" href="#div-sobre">Sobre nós</a>
-        <a class="menus" href="#">Fale conosco</a>
-        <a class="conectar" href="./login.html">Login</a>
-        <a class="cadastro" href="./cadastro.html">Cadastro</a>
-    </div>
+        <div id="div-header" class="div-projetos">
+            <a href="./index.html">Inicio</a>
+            <a class="menus" href="#div-tecnologia">Tecnologias</a>
+            <a class="menus" href="#div-servicos">Serviços</a>
+            <a class="menus" href="#div-sobre">Sobre nós</a>
+            <a class="menus" href="#">Fale conosco</a>
+            <a class="cadastro">Logado</a>
+            <a class="conectar" href="./login.html">Sair</a>
+        </div>
     </header>
 
     <p class="paragrafo-verde" style="margin-top: 6.55%;"></p>
@@ -33,15 +35,16 @@
         <b class="carrossel-titulo">Sensor LM35 - Temperatura</b>
         <section class="dadosgrafico">
             <b class="b-cinza">Média:</b> <b class="b-verde"><label id='average'>00.00°C</label></b>
-            <b class="b-cinza" style="margin-top: 24.2vw; padding-left: 45.85vw;">Temperatura:</b> 
+            <b class="b-cinza" style="margin-top: 24.2vw; padding-left: 45.85vw;">Temperatura:</b>
             <b class="b-verde" style="margin-top: 24.2vw; padding-left: 53.6vw;">
-            <label id='lb_temperatura'>00.00°C</label></b>
+                <label id='lb_temperatura'>00.00°C</label></b>
         </section>
         <section class="dashboard">
             <canvas id="chart"></canvas>
-        <section>
+            <section>
     </div>
 </body>
+
 </html>
 <script>
     var context = document.getElementById("chart").getContext("2d");
@@ -87,7 +90,7 @@
                 xAxes: [{
                     distribution: 'series',
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero: true
                     }
                 }],
                 yAxes: [{
@@ -96,13 +99,13 @@
                         labelString: 'Temperatura'
                     },
                     ticks: {
-                        beginAtZero:true
-                    },    plugins: {
-                                    title: {
-                                        display: true,
-                                        text: 'Chart.js Line Chart - Logarithmic'
-                                        }
-                                    }
+                        beginAtZero: true
+                    }, plugins: {
+                        title: {
+                            display: true,
+                            text: 'Chart.js Line Chart - Logarithmic'
+                        }
+                    }
                 }]
             },
             animation: {
@@ -121,14 +124,14 @@
     this.lastIndexTemp = 0;
     this.time = 0;
 
-    function get_data(){
+    function get_data() {
 
         var http = new XMLHttpRequest();
         http.open('GET', 'http://localhost:3000/api', false);
-        http.send(null);        
-        
+        http.send(null);
+
         var obj = JSON.parse(http.responseText);
-        if (obj.data.length == 0){
+        if (obj.data.length == 0) {
             return;
         }
 
@@ -138,7 +141,7 @@
 
         listTemp.forEach(data => {
             //Máximo de 60 itens exibidos no gráfico
-            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
                 chart.data.labels.shift();
                 chart.data.datasets[0].data.shift();
             }
@@ -147,44 +150,46 @@
             chart.data.datasets[0].data.push(parseFloat(data));
             chart.update();
         });
-            //Alertas
-            var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
+        //Alertas
+        var temperatura = (chart.data.datasets[0].data[9]).toFixed(2);
 
-            if(temperatura >= 24 && temperatura <= 26){
-                configuration.data.datasets[0].label = "Atual - Ideal";
-                configuration.data.datasets[0].borderColor = ['#01b5ff'];
-                configuration.data.datasets[0].backgroundColor = ['#006f9d'];
-                setTimeout(
+        if (temperatura >= 24 && temperatura <= 26) {
+            configuration.data.datasets[0].label = "Atual - Ideal";
+            configuration.data.datasets[0].borderColor = ['#01bb5ff'];
+            configuration.data.datasets[0].backgroundColor = ['#006f9d'];
+            setTimeout(
                 (document.getElementById('lb_temperatura').style.color = '#01b5ff',
-                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                    document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-            }else if(temperatura >= 23 && temperatura <= 27){
-                configuration.data.datasets[0].label = "Atual - Moderado";
-                configuration.data.datasets[0].borderColor = ['#00e400'];
-                configuration.data.datasets[0].backgroundColor = ['#006d00'];
-                setTimeout(
+        } else if (temperatura >= 23 && temperatura <= 27) {
+            configuration.data.datasets[0].label = "Atual - Moderado";
+            configuration.data.datasets[0].borderColor = ['#00e400'];
+            configuration.data.datasets[0].backgroundColor = ['#006d00'];
+            setTimeout(
                 (document.getElementById('lb_temperatura').style.color = '#00e400',
-                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                    document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-            }else if(temperatura >= 22 && temperatura <= 28){
-                configuration.data.datasets[0].label = "Atual - Alto";
-                configuration.data.datasets[0].borderColor = ['#FFF000'];
-                configuration.data.datasets[0].backgroundColor = ['#BDB200'];
-                setTimeout(
+        } else if (temperatura >= 22 && temperatura <= 28) {
+            configuration.data.datasets[0].label = "Atual - Alto";
+            configuration.data.datasets[0].borderColor = ['#FFF000'];
+            configuration.data.datasets[0].backgroundColor = ['#BDB200'];
+            setTimeout(
                 (document.getElementById('lb_temperatura').style.color = '#FFF000',
-                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                    document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
 
-            }if(temperatura < 21.9 || temperatura >28){
-                configuration.data.datasets[0].label = "Atual - Critico";
-                configuration.data.datasets[0].borderColor = ['#B80D0D'];
-                configuration.data.datasets[0].backgroundColor = ['#810B0B'];
-                setTimeout(
+        } if (temperatura < 21.9 || temperatura > 28) {
+            configuration.data.datasets[0].label = "Atual - Critico";
+            configuration.data.datasets[0].borderColor = ['#B80D0D'];
+            configuration.data.datasets[0].backgroundColor = ['#810B0B'];
+            setTimeout(
                 (document.getElementById('lb_temperatura').style.color = '#B80D0D',
-                document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
-            };
-            document.getElementById('average').textContent = `${obj.average}°C`;
-        } 
-        setInterval(() => {
-            get_data();
-        }, 1000);
+                    document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+        };
+
+        document.getElementById('average').textContent = `${obj.average}°C`;
+
+    }
+    setInterval(() => {
+        get_data();
+    }, 1000);
 </script>

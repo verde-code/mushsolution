@@ -123,32 +123,32 @@
     }
     function validacao_cadastro(){
         var nome = ipt_nome.value;
+        var sobrenome = ipt_lastname_register.value;
+        var cnpj = input_cnpj.value;
         var senha_login = ipt_senha_login.value;
         // Verifica Cadastro
         if (senha_login.match(senhaForte)) {
-            if(nome == ""){
+            if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-            alert(`${nome}, seu cadastro registrado com sucesso!`)
+            alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
             window.location.href = './dashboard.html';}
         }else if (senha_login.match(senhaMedia)) {
             if(nome == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-            alert(`${nome}, seu cadastro registrado com sucesso!`)
+            alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
             window.location.href = './dashboard.html';}
         }else if(senha_login == ''){
-            if(nome == ""){
+            if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-                alert(`${nome}, digite uma senha média ou forte!`)
-            window.location.href = './dashboard.html';}
+                alert(`${nome}, digite uma senha média ou forte!`)}
         }else{
-            if(nome == ""){
+            if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-                alert(`${nome}, digite uma senha média ou forte!`)
-            window.location.href = './dashboard.html';}
+                alert(`${nome}, digite uma senha média ou forte!`)}
         }
     }
 
