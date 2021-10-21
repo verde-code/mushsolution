@@ -131,14 +131,14 @@
             if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-            alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
-            window.location.href = './dashboard.html';}
+                alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
+                window.location.href = './dashboard.html';}
         }else if (senha_login.match(senhaMedia)) {
-            if(nome == ""){
+            if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-            alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
-            window.location.href = './dashboard.html';}
+                alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
+                window.location.href = './dashboard.html';}
         }else if(senha_login == ''){
             if(nome == "" || sobrenome == "" || cnpj == ""){
                 alert(`Preencha os campos corretamente!`)
