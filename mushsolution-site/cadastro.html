@@ -96,7 +96,7 @@
 </html>
 <script>
     //Expressão cpf
-    var cpfReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\.?[0-9]{4}\-?[0-9]{2}$/;
+    var cpfReg = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}$/;
     let senhaForte = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
     let senhaMedia = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
 
@@ -159,13 +159,12 @@
             msg_cpf_validation.innerHTML = '';
             cpf_register_true.style.display = 'block';
             cpf_register_false.style.display = 'none';
-        }else if(cpf_login == ""){
-            msg_cpf_validation.innerHTML = '';
         } else {
             msg_cpf_validation.innerHTML = '<span style="color: #ff0000;">Insira um CPF válido</span>';
             cpf_register_false.style.display = 'block';
             cpf_register_true.style.display = 'none';
-        }
+        }if(cpf_login == ""){
+            msg_cpf_validation.innerHTML = '';
     }
-
+    }
 </script>
