@@ -7,6 +7,7 @@
     <title>MushSolution - Inicio</title>
     <link rel="stylesheet" type="text/css"  href="./css/style.css">
     <link rel="icon" href="./img/favicon/favicon-cropped.ico">
+    <script src="./js/contato.js"></script>
 </head>
 <body class="corpo">
     <img class="mushsolution-logo" src="./img/mushsolution-logo.png">
@@ -21,6 +22,7 @@
         <span class="mdi mdi-moon-waning-crescent"></span>
         <a class="conectar" href="./login.html">Login</a>
         <a class="cadastro" href="./cadastro.html">Cadastro</a>
+        <script src="./js/contato.js"></script>
     </div>
     </header>
 
@@ -128,26 +130,27 @@
     <div id="div-contato" class="div-fundo-conteudo-flutuante" style="margin-top: 35%; height: 102%;">
 
         <div class="container-contato-left">
-              <h3 class="b-verde" >Contato</h3>
-              Insira seu nome:<br> 
-              <input class="ipt_nome" placeholder="Ex: Eduardo"><br><br> 
+            <h3 class="b-verde" >Contato</h3>
+            Insira seu nome:<br> 
+              <input class="ipt_nome" id="ipt_nome" placeholder="Ex: Eduardo"><br><br> 
               Insira seu sobrenome:<br>
-              <input class="ipt_sobrenome" placeholder="Ex: Silva"><br><br>
+              <input class="ipt_sobrenome" id="ipt_sobrenome" placeholder="Ex: Silva"><br><br>
               CNPJ:<br>                             
-              <input class="ipt_empresa" placeholder="000.000.000-00"><br><br>
+              <input class="ipt_empresa" id="ipt_empresa" placeholder="000.000.000-00"><br><br>
               E-mail:<br>
-              <input class="ipt_email" placeholder="E-mail"><br><br>
+              <input class="ipt_email" id="ipt_email" placeholder="E-mail"><br><br>
               Telefone:<br>
-              <input class="ipt_tel" placeholder="Telefone"><br><br>
+              <input class="ipt_tel" id="ipt_tel" placeholder="Telefone"><br><br>
         </div>
         <div class="container-contato-right">
             Assunto:<br>
-            <input class="ipt_assunto" placeholder="Assunto"><br><br>
+            <input class="ipt_assunto" id="ipt_assunto"  placeholder="Assunto"><br><br>
             Descrição:<br>
-            <input class="ipt-descricao" placeholder="Descrição"><br><br>
+            <input class="ipt-descricao" id="ipt_descricao" placeholder="Descrição"><br><br>
             <button class="botao-verde" onclick="enviar ()">Enviar a Mensagem</button>  
         </div>
     </div>
     
 </body>
 </html>
+<script>
