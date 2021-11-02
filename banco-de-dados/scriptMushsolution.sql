@@ -1,3 +1,21 @@
+-- REGRA DE NEGÓCIO
+
+-- Um funcionário pode ter uma empresa
+
+-- Uma empresa tem muitos funcionários
+
+-- Uma estufa pode ter uma empresa
+
+-- Uma empresa tem várias estufas
+
+-- Uma estufa pode ter muitos sensores
+
+-- Um sensor pode ter uma estufa
+
+-- Um registro tem um sensor
+
+-- Um sensor tem muitos registros
+
 create database Mushsolution;
 
 use Mushsolution;
