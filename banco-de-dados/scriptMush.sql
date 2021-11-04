@@ -1,21 +1,3 @@
--- REGRA DE NEGÓCIO
-
--- Um funcionário pode ter uma empresa
-
--- Uma empresa tem muitos funcionários
-
--- Uma estufa pode ter uma empresa
-
--- Uma empresa tem várias estufas
-
--- Uma estufa pode ter muitos sensores
-
--- Um sensor pode ter uma estufa
-
--- Um registro tem um sensor
-
--- Um sensor tem muitos registros
-
 create database Mushsolution;
 
 use Mushsolution;
@@ -114,4 +96,19 @@ values
 ('24.55', 'Moderado', '2021-06-15 11:30',3006),
 ('30', 'Critico', '2021-10-14 08:45',3007);
 
-select * from Registro;
+select * from sensor 
+     left join Registro on fk_Sensor=idSensor;
+     
+
+select * from Estufa 
+    inner join Empresa on fk_Empresa=idEmpresa;
+    
+    
+select * from Funcionario
+     right join Empresa on fk_empresa=idEmpresa;
+     
+     
+     
+select * from Funcionario
+         join Empresa on fk_empresa=idEmpresa
+              where nomeEmpresa = 'maxmush';
