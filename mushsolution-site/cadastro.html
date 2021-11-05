@@ -45,7 +45,7 @@
                             <div class="input-register">
                                 <label for="">Nome:</label>
                                 <i class="form-input-icon"></i>
-                                <input id="ipt_nome" onkeyup="validacao_name_register()" type="text"
+                                <input id="ipt_nome" name="nome" onkeyup="validacao_name_register()" type="text"
                                     placeholder="Digite seu nome">
                                 <span class="validation-false" id="msg_name_validation_register"></span>
                             </div>
@@ -53,7 +53,7 @@
                             <div class="input-register">
                                 <label for="">Sobrenome:</label>
                                 <i class="form-input-icon"></i>
-                                <input id="ipt_lastname_register" onkeyup="validacao_lastname_register()" type="text"
+                                <input id="ipt_lastname_register" name="sobrenome" onkeyup="validacao_lastname_register()" type="text"
                                     placeholder="digite seu sobrenome">
                                 
     
@@ -66,7 +66,7 @@
                                 <!-- Icone Validação -->
                                 <i class="validation-true" id="cpf_register_true"></i>
                                 <i class="validation-false" id="cpf_register_false"></i>
-                                <input id="input_cpf" onkeyup="cpf_register()" type="text"placeholder="000.000.000-00"><br>
+                                <input id="input_cpf" name="cpf" onkeyup="cpf_register()" type="text"placeholder="000.000.000-00"><br>
                                 <span class="form-validation-false" id="msg_cpf_validation"></span>
                             </div>
                             <!-- Campo Login -->
@@ -75,7 +75,7 @@
                                 <!-- Icone Validação -->
                                 <i class="" id="senha_login_true"></i>
                                 <i class="validation-false" id="senha_login_false"></i>
-                                <input id="ipt_senha_login" onkeyup="validacao_senha_login()" type="password" placeholder="Digite uma senha">
+                                <input id="ipt_senha_login" name="senha" onkeyup="validacao_senha_login()" type="password" placeholder="Digite uma senha">
                                 <span class="form-validation-false" id="msg_senha_validation_login"></span>
                                 <span class="msg-cadastrar">Já é registrado? <a href="./login.html" target="blank"><b>Entrar</b></a></span>
                             </div>
