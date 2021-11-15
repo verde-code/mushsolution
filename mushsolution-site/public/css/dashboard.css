@@ -1,0 +1,65 @@
+body{
+    overflow:hidden;
+}
+
+.div-fundo-conteudo-dash{
+    position: absolute;
+    padding: 2vh;
+    margin-top: 16vh;
+    background-color: rgba(000, 000, 000, 0.89);
+    width: 100%;
+    height: 75%;
+    border-style: solid;
+    border-color: #00e400;
+    border-width: 0.5%;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+#div-dash .carrossel-titulo{
+}
+
+#div-dash .b-verde-dash{  
+    color: #00e400;
+}
+#div-dash .b-cinza{
+    color: gray; 
+}
+
+.dashboard{
+    margin-top: 0.2vh;
+    padding-top: 2vh; 
+    width: 48vw;
+    height: 28vh;
+    background-color: white;
+    border: 2px solid #00e400;
+    border-radius: 5px; 
+}
+
+.dashboard2{
+    padding-top: 2vh; 
+    width: 48vw;
+    height: 28vh;
+    background-color: white;
+    border: 2px solid #00e400;
+    border-radius: 5px; 
+}
+
+#div-dash2 .carrossel-titulo{
+}
+
+#div-dash .b-verde-dash{
+}
+#div-2 .b-cinza{
+    color: gray;  
+}
+
+.dadosgrafico2{
+    margin-top: 1vh;
+}
+

@@ -41,6 +41,7 @@ body{
     padding: 0;
     position: absolute;
 }
+
 a{
     color: white;
     text-decoration: none;
@@ -106,9 +107,6 @@ a:hover{
     border-left: none;
     border-right: none;
     display: flex;
-}
-.dadosgrafico{
-    margin-top: 1.5vw;
 }
 
 .div-fundo-conteudo-flutuante{
@@ -231,33 +229,6 @@ input{
     text-align: justify;
     
 
-}
-
-#div-dash .carrossel-titulo{
-    margin-top: 1vw;
-    padding-left: 34vw;   
-}
-
-#div-dash .b-verde{
-    position: absolute;
-    margin-top: 25.7vw;
-    padding-left: 50vw;   
-}
-#div-dash .b-cinza{
-    color: gray;
-    position: absolute;
-    margin-top: 25.7vw;
-    padding-left: 46vw;   
-}
-.dashboard{
-    margin-left: 21vw; 
-    margin-top: 11vh;
-    padding-top: 2vh; 
-    width:60%;
-    height: 65%;
-    background-color: white;
-    border: 2px solid #00e400;
-    border-radius: 5px; 
 }
 
 .container input{
