@@ -1,13 +1,9 @@
-body{
-    overflow:hidden;
-}
-
 .div-fundo-conteudo-dash{
     position: absolute;
     padding: 2vh;
     margin-top: 16vh;
     background-color: rgba(000, 000, 000, 0.89);
-    width: 100%;
+    width: 98%;
     height: 75%;
     border-style: solid;
     border-color: #00e400;
@@ -21,7 +17,8 @@ body{
     overflow: hidden;
 }
 
-#div-dash .carrossel-titulo{
+.img-fundo{
+    height: 86.9vh;
 }
 
 #div-dash .b-verde-dash{  

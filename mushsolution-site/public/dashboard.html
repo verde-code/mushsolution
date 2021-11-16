@@ -70,32 +70,32 @@ var context = document.getElementById("chart").getContext("2d");
                     datasets: [{
                     label: ["Atual - Ideal"],
                     type: 'line',
-                    borderColor: ['#01b5ff'],
-                    backgroundColor: ['#006f9d'],
+                    borderColor: ['#01d9ff'],
+                    backgroundColor: ['#006f9dbb'],
                 },
                 {
                     label: ["Critico"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#810B0B'],
+                    backgroundColor: ['#810B0Bbb'],
                 },
                 {
                     label: ["Alto"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#BDB200'],
+                    backgroundColor: ['#BDB200bb'],
                 },
                 {
                     label: ["Moderado"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#006d00'],
+                    backgroundColor: ['#006d00bb'],
                 },
                 {
                     label: ["Ideal"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#006f9d'],
+                    backgroundColor: ['#006f9dbb'],
                 }]
 			},
 			options: {
@@ -162,35 +162,35 @@ var context = document.getElementById("chart").getContext("2d");
 
             if (temperatura >= 24 && temperatura <= 26) {
                 configuration.data.datasets[0].label = "Atual - Ideal";
-                configuration.data.datasets[0].borderColor = ['#01bb5ff'];
-                configuration.data.datasets[0].backgroundColor = ['#006f9d'];
+                configuration.data.datasets[0].borderColor = ['#01d9ff'];
+                configuration.data.datasets[0].backgroundColor = ['#006f9dbb'];
                 setTimeout(
-                    (document.getElementById('lb_temperatura').style.color = '#01b5ff',
-                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                    (document.getElementById('lb_temperatura').style.color = '#01d9ff',
+                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 1000);
 
             } else if (temperatura >= 23 && temperatura <= 27) {
                 configuration.data.datasets[0].label = "Atual - Moderado";
                 configuration.data.datasets[0].borderColor = ['#00e400'];
-                configuration.data.datasets[0].backgroundColor = ['#006d00'];
+                configuration.data.datasets[0].backgroundColor = ['#006d00bb'];
                 setTimeout(
                     (document.getElementById('lb_temperatura').style.color = '#00e400',
-                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 1000);
 
             } else if (temperatura >= 22 && temperatura <= 28) {
                 configuration.data.datasets[0].label = "Atual - Alto";
                 configuration.data.datasets[0].borderColor = ['#FFF000'];
-                configuration.data.datasets[0].backgroundColor = ['#BDB200'];
+                configuration.data.datasets[0].backgroundColor = ['#BDB200bb'];
                 setTimeout(
                     (document.getElementById('lb_temperatura').style.color = '#FFF000',
-                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 1000);
 
             } if (temperatura < 21.9 || temperatura > 28) {
                 configuration.data.datasets[0].label = "Atual - Critico";
                 configuration.data.datasets[0].borderColor = ['#B80D0D'];
-                configuration.data.datasets[0].backgroundColor = ['#810B0B'];
+                configuration.data.datasets[0].backgroundColor = ['#810B0Bbb'];
                 setTimeout(
                     (document.getElementById('lb_temperatura').style.color = '#B80D0D',
-                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 5000);
+                        document.getElementById('lb_temperatura').textContent = `${temperatura}°C`), 1000);
             };
 
             document.getElementById('average').textContent = `${obj.average}°C`;
@@ -208,32 +208,32 @@ var context = document.getElementById("chart").getContext("2d");
                     datasets: [{
                     label: ["Atual - Ideal"],
                     type: 'line',
-                    borderColor: ['#01b5ff'],
-                    backgroundColor: ['#006f9d'],
+                    borderColor: ['#01d9ff'],
+                    backgroundColor: ['#006f9dbb'],
                 },
                 {
                     label: ["Critico"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#810B0B'],
+                    backgroundColor: ['#810B0Bbb'],
                 },
                 {
                     label: ["Alto"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#BDB200'],
+                    backgroundColor: ['#BDB200bb'],
                 },
                 {
                     label: ["Moderado"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#006d00'],
+                    backgroundColor: ['#006d00bb'],
                 },
                 {
                     label: ["Ideal"],
                     type: 'line',
                     borderColor: ['#fff'],
-                    backgroundColor: ['#006f9d'],
+                    backgroundColor: ['#006f9dbb'],
                 }]
 			},
 			options: {
@@ -301,35 +301,35 @@ var context = document.getElementById("chart").getContext("2d");
 
             if (umidade >= 84 && umidade <= 86) {
                 configuration2.data.datasets[0].label = "Atual - Ideal";
-                configuration2.data.datasets[0].borderColor = ['#01bb5ff'];
-                configuration2.data.datasets[0].backgroundColor = ['#006f9d'];
+                configuration2.data.datasets[0].borderColor = ['#01d9ff'];
+                configuration2.data.datasets[0].backgroundColor = ['#006f9dbb'];
                 setTimeout(
-                    (document.getElementById('lb_umidade').style.color = '#01b5ff',
-                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 5000);
+                    (document.getElementById('lb_umidade').style.color = '#01d9ff',
+                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 1000);
 
             } else if (umidade >= 82 && umidade <= 88) {
                 configuration2.data.datasets[0].label = "Atual - Moderado";
                 configuration2.data.datasets[0].borderColor = ['#00e400'];
-                configuration2.data.datasets[0].backgroundColor = ['#006d00'];
+                configuration2.data.datasets[0].backgroundColor = ['#006d00bb'];
                 setTimeout(
                     (document.getElementById('lb_umidade').style.color = '#00e400',
-                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 5000);
+                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 1000);
 
             } else if (umidade >= 81 && umidade <= 89) {
                 configuration2.data.datasets[0].label = "Atual - Alto";
                 configuration2.data.datasets[0].borderColor = ['#FFF000'];
-                configuration2.data.datasets[0].backgroundColor = ['#BDB200'];
+                configuration2.data.datasets[0].backgroundColor = ['#BDB200bb'];
                 setTimeout(
                     (document.getElementById('lb_umidade').style.color = '#FFF000',
-                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 5000);
+                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 1000);
 
             } if (umidade < 80 || umidade > 90) {
                 configuration2.data.datasets[0].label = "Atual - Critico";
                 configuration2.data.datasets[0].borderColor = ['#B80D0D'];
-                configuration2.data.datasets[0].backgroundColor = ['#810B0B'];
+                configuration2.data.datasets[0].backgroundColor = ['#810B0Bbb'];
                 setTimeout(
                     (document.getElementById('lb_umidade').style.color = '#B80D0D',
-                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 5000);
+                        document.getElementById('lb_umidade').textContent = `${umidade}%`), 1000);
             };
             document.getElementById('averageHumidity').textContent = `${obj.media_umidade}%`;
             } 
