@@ -31,18 +31,18 @@
 .dashboard{
     margin-top: 0.2vh;
     padding-top: 2vh; 
-    width: 48vw;
-    height: 28vh;
-    background-color: white;
+    width: 45vw;
+    height: 25vh;
+    background-color: #ffffffe3;
     border: 2px solid #00e400;
     border-radius: 5px; 
 }
 
 .dashboard2{
     padding-top: 2vh; 
-    width: 48vw;
-    height: 28vh;
-    background-color: white;
+    width: 45vw;
+    height: 26vh;
+    background-color: #ffffffe3;
     border: 2px solid #00e400;
     border-radius: 5px; 
 }
