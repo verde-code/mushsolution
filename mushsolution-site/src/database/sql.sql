@@ -4,53 +4,65 @@
 
 /* para sql server - remoto - produção */
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-);
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-); 
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
-);
 
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+create database Mushsolution;
 
-USE acquatec;
+use Mushsolution;
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+create table Empresa (
+idEmpresa int primary key auto_increment,
+nomeEmpresa varchar(45),
+cnpj varchar(45),
+senha varchar(45),
+celular varchar(45),
+email varchar (45)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-); 
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
-);
+create table Funcionario(
+idFuncionario int primary key auto_increment,
+nomeFuncionario varchar(45),
+sobrenomeFuncionario varchar(45),
+celular varchar(45),
+cpf varchar (45),
+login varchar (45),
+senha varchar (45),
+fk_Empresa int,
+foreign key (fk_empresa) references Empresa(idEmpresa)
+) auto_increment = 1000;
+
+
+
+create table Estufa(
+idEstufa int primary key auto_increment,
+nomeEstufa varchar(45),
+localEstufa varchar(45),
+fk_Empresa int,
+foreign key (fk_empresa) references Empresa(idEmpresa)
+) auto_increment = 2000;
+
+select * from Estufa;
+
+create table Sensor(
+idSensor int primary key auto_increment,
+nomeSensor varchar(45),
+fk_Estufa int,
+foreign key (fk_Estufa) references Estufa(idEstufa)
+) auto_increment = 3000;
+
+
+select * from Sensor;
+
+create table Registro(
+idRegistro int primary key auto_increment,
+temperatura float,
+alerta char(8),
+check (alerta = 'Moderado' or alerta = 'Alto' or alerta = 'Critico'),
+dataHora datetime,
+fk_Sensor int,
+foreign key (fk_Sensor) references Sensor(idSensor)
+) auto_increment = 4000;
