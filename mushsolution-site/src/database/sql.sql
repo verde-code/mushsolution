@@ -9,6 +9,10 @@
 
 
 /* para workbench - local - desenvolvimento */
+-- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'bandtec';
+-- FLUSH PRIVILEGES;
+-- Comando para resolver erro de acesso ao banco
+
 create database Mushsolution;
 
 use Mushsolution;
@@ -28,7 +32,7 @@ idFuncionario int primary key auto_increment,
 nomeFuncionario varchar(45),
 sobrenomeFuncionario varchar(45),
 celular varchar(45),
-cpf varchar (45),
+cpf varchar (45) unique,
 login varchar (45),
 senha varchar (45),
 fk_Empresa int,
