@@ -25,10 +25,10 @@ idFuncionario int primary key auto_increment,
 nomeFuncionario varchar(45),
 sobrenomeFuncionario varchar(45),
 celular varchar(45),
-email varchar (45),
+email varchar (45)unique,
 senha varchar (45),
 cargo varchar (45),
-cpf varchar (45),
+cpf varchar (45) unique,
 fk_Empresa int,
 foreign key (fk_empresa) references Empresa(idEmpresa)
 ) auto_increment = 1000;
