@@ -25,20 +25,23 @@ idFuncionario int primary key auto_increment,
 nomeFuncionario varchar(45),
 sobrenomeFuncionario varchar(45),
 celular varchar(45),
+email varchar (45),
+senha varchar (45),
 cargo varchar (45),
 cpf varchar (45),
-login varchar (45),
-senha varchar (45),
 fk_Empresa int,
 foreign key (fk_empresa) references Empresa(idEmpresa)
 ) auto_increment = 1000;
 
-insert into Funcionario (nomeFuncionario, sobrenomeFuncionario, celular, cargo, cpf, login, senha, fk_Empresa)
+
+
+
+insert into Funcionario (nomeFuncionario, sobrenomeFuncionario, celular,email, senha, cargo, cpf, fk_Empresa)
 values 
-('Jorge', 'Silva', 11678905432, 'Gerente', 56789754321, 'Jorge.silva@bandtec.com.br', '@B12345c', 1),
-('Renata', 'Souza', 11973300488, 'PO', 23456788903, 'renata.melo@bandtec.com.br', 'Coco@3454',2),
-('Pedro', 'Nascimento', 11955223315,'Encarregado', 456788906453, 'pedro.nascimento@bandtec.com.br', 'cogubr@1111',3),
-('Mariana', 'Costa',119087645432, 'Analista', 4567890675443,'Mariana.costa@bandtec.com.br', '@D12345k' , 4);
+('Jorge', 'Silva', 11678905432, 'Jorge.silva@bandtec.com.br', '@B12345c', 'Gerente', '37087456787', 1),
+('Renata', 'Souza', 11973300488,  'renata.melo@bandtec.com.br', 'Coco@3454','PO', 23456788903,2),
+('Pedro', 'Nascimento', 11955223315,'pedro.nascimento@bandtec.com.br', 'cogubr@1111','Encarregado', 456788906453, 3),
+('Mariana', 'Costa',119087645432, 'Mariana.costa@bandtec.com.br', '@D12345k' ,'Analista', 4567890675443, 4);
 
 select * From Funcionario;
 
@@ -65,42 +68,65 @@ select * from Estufa;
 
 create table Sensor(
 idSensor int primary key auto_increment,
-nomeSensor varchar(45),
+tipoSensor varchar(45),
 fk_Estufa int,
 foreign key (fk_Estufa) references Estufa(idEstufa)
 ) auto_increment = 3000;
 
-insert into Sensor (nomeSensor, fk_Estufa)
+insert into Sensor (tipoSensor, fk_Estufa)
 values
-('A1', 2000),
-('B3',2001),
-('A2',2002),
-('B4',2003);
+('DHT11', 2000),
+('DHT11',2001),
+('DHT11',2002),
+('DHT11',2003);
 
 select * from Sensor;
 
 create table Registro(
 idRegistro int primary key auto_increment,
 temperatura float,
-alerta char(8),
-check (alerta = 'Moderado' or alerta = 'Alto' or alerta = 'Critico'),
+umidade float,
+tipoAlerta char(8),
+check (tipoAlerta = 'Moderado' or tipoAlerta= 'Alto' or tipoAlerta = 'Critico'),
 dataHora datetime,
 fk_Sensor int,
 foreign key (fk_Sensor) references Sensor(idSensor)
 ) auto_increment = 4000;
 
-insert into  Registro( temperatura, alerta, dataHora, fk_Sensor)
-values
-('22.34', 'Alto', '2021-05-09 14:00', 3004),
-('22.33', 'Alto', '2021-08-09 12:00',3005),
-('24.55', 'Moderado', '2021-06-15 11:30',3006),
-('30', 'Critico', '2021-10-14 08:45',3007);
+select * from Registro;
 
-select * from sensor 
+insert into  Registro( temperatura, umidade, tipoAlerta, dataHora, fk_Sensor)
+values
+('22.34','80', 'Alto', '2021-05-09 14:00', 3000),
+('22.33','89', 'Alto', '2021-08-09 12:00',3001),
+('24.55','88', 'Moderado', '2021-06-15 11:30',3002),
+('30', '90', 'Critico', '2021-10-14 08:45',3003);
+
+
+create table acesso (
+idAcesso int primary key auto_increment,
+fk_Estufa int,
+foreign key (fk_Estufa) references Estufa(idEstufa),
+fk_Funcionario int,
+foreign key (fk_Funcionario) references Funcionario(idFuncionario),
+dataHoraAcesso datetime,
+tipoCargo varchar (45)) auto_increment 5000;
+
+insert into  acesso(fk_Estufa ,fk_Funcionario , dataHoraAcesso, tipoCargo)
+values
+(2000,1000,  '2021-05-09 14:00', 'gerente'),
+(2001,1001,  '2021-05-09 14:00', 'atendente'),
+(2002,1002,  '2021-05-09 14:00', 'recepcionista'),
+(2003,1003, '2021-05-09 14:00', 'gerente comercial');
+
+
+
+
+select * from sensor
      left join Registro on fk_Sensor=idSensor;
      
 
-select * from Estufa 
+select * from Estufa
     inner join Empresa on fk_Empresa=idEmpresa;
     
     
