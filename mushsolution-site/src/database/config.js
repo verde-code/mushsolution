@@ -1,12 +1,12 @@
-var mysql = require("mysql2");
+// var mysql = require("mysql2");
 var sql = require('mssql');
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
 var sqlServerConfig = {
-    user: "XXXXX",
-    password: "XXXXX",
-    database: "XXXXX",
-    server: "XXXXX",
+    user: "adm",
+    password: "Mushsolution123",
+    database: "projeto-mushsolution",
+    server: "projeto-mushsolution.database.windows.net",
     pool: {
         max: 10,
         min: 0,
@@ -21,7 +21,7 @@ var sqlServerConfig = {
 var mySqlConfig = {
     host: "localhost",
     user: "root",
-    password: "M20l13l09!",
+    password: "vinifonbar",
     database: "Mushsolution",
 };
 

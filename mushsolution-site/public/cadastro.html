@@ -131,7 +131,36 @@
             if(nome == "" || sobrenome == "" || cpf == ""){
                 alert(`Preencha os campos corretamente!`)
             }else{
-                alert(`${nome}, seu cadastro foi efetuado com sucesso!`)
+                    fetch("/usuarios/cadastrar", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        nomeServer: nome,
+                        sobrenomeServer: sobrenome,
+                        cpfServer: cpf,
+                        senhaServer: senha_login,
+                        
+                    })
+                }).then(function (resposta) {
+
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                        window.alert("Cadastro realizado com sucesso!");
+                        window.location = "login.html";
+                        limparFormulario();
+                        finalizarAguardar();
+                    } else {
+                        alert ("Houve um erro ao tentar realizar o cadastro!");
+                        throw ("Houve um erro ao tentar realizar o cadastro!");
+                    }
+                }).catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                    finalizarAguardar();
+                });
+                return false;
                 window.location.href = './login.html';}
         }else if (senha_login.match(senhaMedia)) {
             if(nome == "" || sobrenome == "" || cpf == ""){
@@ -149,43 +178,8 @@
                 alert(`Preencha os campos corretamente!`)
             }else{
                 alert(`${nome}, digite uma senha média ou forte!`)}
-
-
-
-
-                fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nomeServer: nome,
-                sobrenomeServer: sobrenome,
-                cpfServer: cpf,
-                senhaServer: senha_login,
-                
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                window.alert("Cadastro realizado com sucesso!");
-                window.location = "login.html";
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-            }
-
         }
+    }
     
     function cpf_register() {
         // Variáveis Login
