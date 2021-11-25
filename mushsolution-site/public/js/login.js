@@ -45,11 +45,53 @@
     }function validar(){
         cpf_login = ipt_cpf_login.value;
         senha_login = ipt_senha_login.value;
-        if(cpf_login == '123.456.789-01' && senha_login == 'Mushsolution'){
-                window.location.href = './dashboard.html';
-        }else{
-            msg_login.style.display = 'block';
-            msg_login.style.color = '#ff0000';
-            msg_login.innerHTML = 'CNPJ ou Senha inválida. Tente novamente.';
-        }
+
+        console.log("FORM LOGIN: ", cpf_login);
+        console.log("FORM SENHA: ", senha_login);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                cpfServer: cpf_login,
+                senhaServer: senha_login
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.CPF_USUARIO = json.cpf;
+                    sessionStorage.SENHA_USUARIO = json.senha;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
+    
