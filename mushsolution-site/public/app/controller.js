@@ -35,6 +35,7 @@ router.post('/sendData', (request, response) => {
 
     let data_agora = new Date()
 
+<<<<<<< HEAD
     var sql = "INSERT INTO registro(temperatura,umidade) VALUES(?)";
     values1 = [temperatura];
     values2 = [umidade];
@@ -43,9 +44,15 @@ router.post('/sendData', (request, response) => {
         console.log("Medidas inseridas: " + result.affectedRows)
     });
     db.query(sql, [values2], function(err, result){
+=======
+    var sql = "INSERT INTO registro(temperatura,umidade,dataHora) VALUES(?,now())";
+    values = [temperatura,umidade];  
+    db.query(sql, values, function(err, result){
+>>>>>>> 8990b658d3e69aa57f9fb1c483dda57c12fab919
         if(err) throw err;
         console.log("Medidas inseridas: " + result.affectedRows)
     });
+    
     response.sendStatus(200);
 })
 

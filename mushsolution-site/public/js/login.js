@@ -43,10 +43,17 @@
         } else {
         }
     }function validar(){
+<<<<<<< HEAD
+        cpf_login = ipt_cpf_login.value;
+        senha_login = ipt_senha_login.value;
+
+        console.log("FORM LOGIN: ", cpf_login);
+=======
         var cpf = ipt_cpf_login.value;
         var senha_login = ipt_senha_login.value;
 
         console.log("FORM LOGIN: ", cpf);
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc
         console.log("FORM SENHA: ", senha_login);
 
         fetch("/usuarios/autenticar", {
@@ -55,7 +62,11 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+<<<<<<< HEAD
+                cpfServer: cpf_login,
+=======
                 emailServer: cpf,
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc
                 senhaServer: senha_login
             })
         }).then(function (resposta) {
@@ -70,6 +81,18 @@
 
                     sessionStorage.CPF_USUARIO = json.cpf;
                     sessionStorage.SENHA_USUARIO = json.senha;
+<<<<<<< HEAD
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+=======
                     sessionStorage.ID_USUARIO = json.idFuncionario;
                     window.location = '../dashboard.html'
                 });
@@ -78,6 +101,7 @@
                 msg_login.style.display = 'block';
                 msg_login.style.color = '#ff0000';
                 msg_login.innerHTML = 'CNPJ ou Senha inválida. Tente novamente.';
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
@@ -91,4 +115,9 @@
         })
 
         return false;
+<<<<<<< HEAD
     }
+    
+=======
+    }
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc

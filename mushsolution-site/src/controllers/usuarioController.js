@@ -25,7 +25,11 @@ function listar(req, res) {
 }
 
 function entrar(req, res) {
+<<<<<<< HEAD
+    var cpf = req.body.cpfServer;
+=======
     var cpf = req.body.emailServer;
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc
     var senha = req.body.senhaServer;
 
     if (cpf== undefined) {
@@ -44,7 +48,11 @@ function entrar(req, res) {
                         console.log(resultado);
                         res.json(resultado[0]);
                     } else if (resultado.length == 0) {
+<<<<<<< HEAD
+                        res.status(403).send("CPF e/ou senha inválido(s)");
+=======
                         res.status(403).send("cpf e/ou senha inválido(s)");
+>>>>>>> 965b9702615ebc29b009a11d0418028fc2f819fc
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }

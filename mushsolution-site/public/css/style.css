@@ -67,7 +67,7 @@ a:hover{
 
 .div-projetos{
     position: absolute;
-    width: 99vh;
+    width: 98vh;
     margin-left: 35%;
     margin-top: 3%;
 
@@ -86,6 +86,11 @@ a:hover{
 }
 .cadastro{
     margin-left: 51vh;
+    position: absolute;
+}
+
+.pergunta{
+    margin-left: 6vh;
     position: absolute;
 }
 .img-fundo{
