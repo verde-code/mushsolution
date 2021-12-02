@@ -59,7 +59,6 @@ foreign key (fk_Sensor) references Sensor(idSensor)
 );
 
 
-
 create table acesso (
 idAcesso int primary key identity(5000,1),
 fk_Estufa int,
@@ -128,6 +127,7 @@ select * from Sensor;
 create table Registro(
 idRegistro int primary key auto_increment,
 temperatura float,
+umidade float,
 alerta char(8),
 check (alerta = 'Moderado' or alerta = 'Alto' or alerta = 'Critico'),
 dataHora datetime,
