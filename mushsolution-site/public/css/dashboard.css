@@ -18,14 +18,19 @@
 }
 
 .img-fundo{
-    height: 86.9vh;
+    height: 85.1vh;
 }
 
 #div-dash .b-verde-dash{  
     color: #00e400;
 }
+
 #div-dash .b-cinza{
     color: gray; 
+}
+
+.cadastro:hover{
+    color: white;
 }
 
 .dashboard{

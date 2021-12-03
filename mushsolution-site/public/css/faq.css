@@ -20,6 +20,9 @@ body{
     justify-content: center;
   }
 
+.img-fundo{
+    height: 85.1525vh;
+}
   
  .box-faq{
     padding-top: 1vh;
@@ -37,18 +40,21 @@ body{
     display: flex;
     flex-direction: column;
     width: 45vw;
+    padding-bottom: 7vh;
 }
 
  b{
 font-size: large;
 }
 
-
 .div-fundo-conteudo{
+    margin-top: 20vh;
+    height: 70vh;
     overflow: auto;
     display: flex;
-   justify-content: center;
-   text-align: justify;
+    justify-content: center;
+    text-align: justify;
+    padding-top: 5vh;
    
   }
   
