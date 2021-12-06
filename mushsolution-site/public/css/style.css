@@ -40,6 +40,8 @@ body{
     margin: 0vh;
     padding: 0;
     position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 a{
@@ -75,6 +77,26 @@ a:hover{
 .menus{
     margin-left: 2%;
 }
+
+.menus-aqui{
+    margin-left: 2%;
+    color: #00e400;
+}
+
+.menus-aqui:hover{
+    color: white;
+    transition: 0.2s;
+}
+
+.inicio-aqui{
+    color: #00e400;
+}
+
+.inicio-aqui:hover{
+    color: white;
+    transition: 0.2s;
+}
+
 .conectar{
     color: #00e400;
     margin-left: 43vh;
@@ -85,6 +107,15 @@ a:hover{
     transition: 0.2s;
 }
 .cadastro{
+    margin-left: 51vh;
+    position: absolute;
+}
+
+.logado:hover{
+    color: white;
+    transition: 0.2s;
+}
+.logado{
     margin-left: 51vh;
     position: absolute;
 }

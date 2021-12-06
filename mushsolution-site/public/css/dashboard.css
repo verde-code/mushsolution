@@ -18,7 +18,7 @@
 }
 
 .img-fundo{
-    height: 85.1vh;
+    height: 85.88vh;
 }
 
 #div-dash .b-verde-dash{  
@@ -27,10 +27,6 @@
 
 #div-dash .b-cinza{
     color: gray; 
-}
-
-.cadastro:hover{
-    color: white;
 }
 
 .dashboard{
