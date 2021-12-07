@@ -58,3 +58,14 @@ font-size: large;
    
   }
   
+  .btn-faq{
+      color:#00e400;
+  }
+
+  a:hover{
+      background-color: #00e400;
+      color: white;
+      border-radius: 5px;
+  }
+
+  
