@@ -12,14 +12,6 @@ html{
     scroll-behavior: smooth;
 }
 
-header{
-    position: sticky;
-}
-
-.div-header{
-    position: sticky;
-}
-
 body{
     background-color: black;
     font-family: Arial;

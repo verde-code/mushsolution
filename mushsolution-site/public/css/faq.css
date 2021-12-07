@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;800&family=Poppins&display=swap%27');
+
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +50,7 @@ font-size: large;
 
 .div-fundo-conteudo{
     margin-top: 20vh;
-    height: 70vh;
+    height: 75vh;
     overflow: auto;
     display: flex;
     justify-content: center;
@@ -60,12 +61,14 @@ font-size: large;
   
   .btn-faq{
       color:#00e400;
+      transition: 0.2s;
   }
 
-  a:hover{
-      background-color: #00e400;
-      color: white;
-      border-radius: 5px;
+  .btn-faq:hover{
+    background-color: #00e400;
+    padding: 0.7vh;
+    border-radius: 6px;
+    color: #ffffff;
   }
 
   

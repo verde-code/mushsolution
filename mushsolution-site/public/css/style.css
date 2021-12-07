@@ -18,16 +18,8 @@ html{
     scroll-behavior: smooth;
 }
 
-header{
-    position: sticky;
-}
-
 button{
     cursor: pointer;
-}
-
-.div-header{
-    position: sticky;
 }
 
 body{
@@ -233,6 +225,9 @@ a:hover{
 .botao-branco:hover{
     color: #00e400;
     transition: 0.2s;
+}
+.b-branco{
+    color: #ffffff;
 }
 
 input{
